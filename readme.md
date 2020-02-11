@@ -8,6 +8,8 @@ The idea here is to massively speed up writing, correct typos and save your fing
 It might be useful for you to delete all my custom corrections and start building this script up with your own ones if you encounter any weird behavior, but I have not found any issues with the script. If you do simply delete everything after this: 
 
 ;-------------------------------------------------------------------------------
+
 ; Anything below this point was added to the script by the user via the Capslock hotkey.
+
 ;-------------------------------------------------------------------------------
 
