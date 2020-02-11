@@ -1,3 +1,5 @@
+This is a systemwide autocorrect that works in every program by auto-backspacing. The main script functionality comes courtesy of https://autohotkey.com/board/topic/89909-autocorrect-script-a-bit-better, I remapped the add-correction key to capslock and added a large list of typo corrections from months of writing. 
+
 This AutoHotkey script serves three main functions: 
 * Correcting every typo you ever made to ensure near-perfect copywriting even during drafting phase.
 * Expanding abbreviations and short-key-combinations for much faster typing (for example "eo" being expanded to "each other" and "fe" to "for example")
