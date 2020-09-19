@@ -6,7 +6,7 @@ ScrollLock::Suspend
 ; Sep 13 2007: Added more misspellings.
 ;              Added fix for -ign -> -ing that ignores words like "sign".
 ;              Added word beginnings/endings sections to cover more options.
-;              Added auto-accents section for words like fiancée, naïve, etc.
+;              Added auto-accents section for words like fiancÃ©e, naÃ¯ve, etc.
 ; Feb 28 2007: Added other common misspellings based on MS Word AutoCorrect.
 ;              Added optional auto-correction of 2 consecutive capital letters.
 ; Sep 24 2006: Initial release by Jim Biancolo (http://www.biancolo.com)
@@ -100,6 +100,20 @@ LCtrl & Capslock::
    SetCapsLockState, off
 
 Return
+
+;renpy specific, take this out if you don't need it
+
+::#t::{#}todo
+::sbt::scene black {#}todo
+::newscene::
+{
+Send, label SCENENAME: {#}todo {Enter}
+Send, {Tab}scene black {#}todo set background image{Enter}
+Send, {#}todo write your content here{Enter}
+Send, jump ANOTHERSCENENAME{#}todo jump to next label
+Return
+}
+;renpy end
 
 
 ;------------------------------------------------------------------------------
@@ -4730,12 +4744,12 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ; and move into the above list or, preferably, the autocorrect user file.
 ;------------------------------------------------------------------------------
 /*
-:*:cooperat::coöperat
-::(c)::©
-::(r)::®
-::(tm)::™
-::a gogo::à gogo
-::abbe::abbé
+:*:cooperat::coÃ¶perat
+::(c)::Â©
+::(r)::Â®
+::(tm)::â¢
+::a gogo::Ã  gogo
+::abbe::abbÃ©
 ::accension::accession, ascension
 ::achive::achieve, archive
 ::achived::achieved, archived
@@ -4747,12 +4761,12 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::affort::afford, effort
 ::agin::again, a gin, aging
 ::agina::again, angina
-::ago-go::àgo-go
+::ago-go::Ã go-go
 ::aledge::allege, a ledge
 ::alot::a lot, allot
 ::alusion::allusion, illusion
 ::amature::armature, amateur
-::anu::añu
+::anu::aÃ±u
 ::anual::annual, anal
 ::anual::annual, manual
 ::aparent::apparent, a parent
@@ -4770,19 +4784,19 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::behavour::behavior, behaviour
 ::belives::believes, beliefs
 ::boaut::bout, boat, about
-::Bon::Bön
+::Bon::BÃ¶n
 
 ::assasined::assassinated Broken by ":*:assasin::", but no great loss.
-::Bootes::Boötes
-::bric-a-brac::bric-à-brac
+::Bootes::BoÃ¶tes
+::bric-a-brac::bric-Ã -brac
 ::buring::burying, burning, burin, during
 ::busineses::business, businesses
-::cafe::café
+::cafe::cafÃ©
 ::calaber::caliber, calibre
 ::calander::calendar, calender, colander
 ::cancelled::canceled  ; commonwealth vs US
 ::cancelling::canceling  ; commonwealth vs US
-::canon::cañon
+::canon::caÃ±on
 ::cant::cannot, can not, can't
 ::carcas::carcass, Caracas
 ::carmel::caramel, carmel-by-the-sea
@@ -4794,9 +4808,9 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::clera::clear, sclera
 ::comander::commander, commandeer
 ::competion::competition, completion
-::continuum::continuüm
-::coopt::coöpt
-::coordinat::coördinat
+::continuum::continuÃ¼m
+::coopt::coÃ¶pt
+::coordinat::coÃ¶rdinat
 ::coorperation::cooperation, corporation
 ::coudl::could, cloud
 ::councellor::councillor, counselor, councilor
@@ -4804,15 +4818,15 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::coururier::courier, couturier
 ::coverted::converted, covered, coveted
 ::cpoy::coy, copy
-::creme::crème
+::creme::crÃ¨me
 ::dael::deal, dial, dahl
 ::deram::dram, dream
 ::desparate::desperate, disparate
 ::diea::idea, die
 ::dieing::dying, dyeing
 ::diversed::diverse, diverged
-::divorce::divorcé
-::Dona::Doña
+::divorce::divorcÃ©
+::Dona::DoÃ±a
 ::doub::doubt, daub
 ::dyas::dryas, Dyas (Robert Dyas is a hardware chain), dais
 ::efford::effort, afford
@@ -4820,7 +4834,7 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::eigth::eighth, eight
 ::electic::eclectic, electric
 ::electon::election, electron
-::elite::élite
+::elite::Ã©lite
 ::emition::emission, emotion
 ::emminent::eminent, imminent
 ::empirial::empirical, imperial
@@ -4828,8 +4842,8 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::erally::orally, really
 ::erested::arrested, erected
 ::ethose::those, ethos
-::etude::étude
-::expose::exposé
+::etude::Ã©tude
+::expose::exposÃ©
 ::extint::extinct, extant
 ::eyar::year, eyas
 ::eyars::years, eyas
@@ -4873,7 +4887,7 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::israelies::Israelis, Israelites
 ::labatory::lavatory, laboratory
 ::labled::labelled, labeled
-::lame::lamé
+::lame::lamÃ©
 ::leanr::lean, learn, leaner
 ::lible::libel, liable
 ::liscense::license, licence
@@ -4892,35 +4906,35 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::manuevers::maneuvers, manoeuvres
 ::mear::wear, mere, mare
 ::meranda::veranda, Miranda
-::Metis::Métis
+::Metis::MÃ©tis
 ::mit::mitt, M.I.T., German "with"
 ::monestary::monastery, monetary
 ::moreso::more, more so
 ::muscels::mussels, muscles
-::ne::né
+::ne::nÃ©
 ::neice::niece, nice
 ::neigbour::neighbour, neighbor
 ::neigbouring::neighbouring, neighboring
 ::neigbours::neighbours, neighbors
 ::nto:: not ; Replaced with case sensitive for NTO acronym.
 ::oging::going, ogling
-::ole::olé
+::ole::olÃ©
 ::onot::note, not
-::opium::opïum
-::ore::öre
-::ore::øre
+::opium::opÃ¯um
+::ore::Ã¶re
+::ore::Ã¸re
 ::orgin::origin, organ
 ::palce::place, palace
-::pate::pâte
-::pate::pâté
+::pate::pÃ¢te
+::pate::pÃ¢tÃ©
 ::performes::performed, performs
 ::personel::personnel, personal
 ::positon::position, positron
-::preëmpt
-::premiere::première
-::premiered::premièred
-::premieres::premières
-::premiering::premièring
+::preÃ«mpt
+::premiere::premiÃ¨re
+::premiered::premiÃ¨red
+::premieres::premiÃ¨res
+::premiering::premiÃ¨ring
 ::procede::proceed, precede
 ::proceded::proceeded, preceded
 ::procedes::proceeds, precedes
@@ -4931,15 +4945,15 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::prominately::prominently, predominately
 ::qtuie::quite, quiet
 ::qutie::quite, quiet
-::reenter::reënter
+::reenter::reÃ«nter
 ::relized::realised, realized
 ::repatition::repetition, repartition
-::residuum::residuüm
+::residuum::residuÃ¼m
 ::restraunt::restraint, restaurant
-::resume::résumé
+::resume::rÃ©sumÃ©
 ::rigeur::rigueur, rigour, rigor
-::role::rôle
-::rose::rosé
+::role::rÃ´le
+::rose::rosÃ©
 ::sasy::says, sassy
 ::scholarstic::scholastic, scholarly
 ::secceeded::seceded, succeeded
@@ -4976,7 +4990,7 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::travelling::traveling   ; commonwealth vs US
 ::troups::troupes, troops
 ::turnk::turnkey, trunk
-::uber::über
+::uber::Ã¼ber
 ::unmanouverable::unmaneuverable, unmanoeuvrable
 ::unsed::used, unused, unsaid
 ::vigeur::vigueur, vigour, vigor
@@ -4990,7 +5004,7 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::woulf::would, wolf
 ::ws::was, www.example.ws
 ::Yementite::Yemenite, Yemeni
-:?:oology::oölogy
+:?:oology::oÃ¶logy
 :?:t he:: the  ; Can't use this. Needs to be cleverer.
 */
 
@@ -5118,7 +5132,7 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::becayse::because
 ::beceause::because
 ::benig::being
-::bjork::Björk
+::bjork::BjÃ¶rk
 ::borther::brother
 ::bouat::about
 ::bougth::bought
@@ -5195,7 +5209,7 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::documentaiton::documentation
 ::doe sit::does it ; "Where does the doe sit?" is exceedingly uncommon
 ::doenst::doesn't
-::does’t::doesn’t
+::doesât::doesnât
 ::does't::doesn't
 ::doest::doesn't
 ::droppin::dropping
@@ -5297,7 +5311,7 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::hwne::when
 ::hwy::why ; highway?
 ::i'ts::it's
-::i2c::I²C
+::i2c::IÂ²C
 ::icnlude::include
 ::ifnd::find
 ::imaginig::imagining
@@ -5338,7 +5352,7 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::kahki::khaki
 ::kev::keV
 ::kidn::kind
-::kwh::kWh ; or kW·h?
+::kwh::kWh ; or kWÂ·h?
 ::langauge::language
 ::layotu::layout
 ::leaveing::leaving
@@ -5378,7 +5392,7 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::mstake::mistake
 ::muhc::much
 ::muich::much
-::mwh::MWh ; or MW⋅h?
+::mwh::MWh ; or MWâh?
 ::myeslf::myself
 ::nad::and ; usually...
 ::naerby::nearby
@@ -5386,7 +5400,7 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::naything::anything
 ::nayway::anyway
 ::necesasry::necessary
-::nee::need ; not née
+::nee::need ; not nÃ©e
 ::neergy::energy
 ::negatuive::negative
 ::neough::enough
@@ -5701,1978 +5715,3019 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ; Anything below this point was added to the script by the user via the Capslock hotkey.
 ;-------------------------------------------------------------------------------
 
-::wont::won't
-::shoulnt::shouldn't
-::werent::weren't
-::hadnt::hadn't
-::cant::can't
-::caer::care
-::lats::last
-::latsing::lasting
-::tset::test
-::bset::best
-
-::fogrot::forgot
-::eo::each other
-::eos::each other's
-::tbh::to be honest
-::tba::to be announced
-::blieve::believe
-::bliver::believer
-::bleived::believed
-::hav ethe::have the
-::marvelled::marveled
-::descnet::descent
-::presure::pressure
-::ned::need
-::wordpress::Wordpress
-::presonally::personally
-::i::I
-::colaborate::collaborate
-::jekyll::Jekyll
-::someon::someone
-::tha tneeded::that needed
-::amazon::Amazon
-::im::I'm
-::markdown::Markdown
-::proabbly::probably
-::publich::publish
-::vent hough::ven though
-::imo::in my opinion
-::drwon::drown
-::discoveres::discovers
-::stroy::story
-::tojust::to just
-::suppsed::supposed
-::hobyist::hobbyist
-::emitt::emit
-::finsih::finish
-::ti::it
-::lok::look
-::involunty::involuntary
-::curent::current
-::expeirce::experience
-::exp::experience
-::expd::experienced
-::exps::experiences
-::extrmee::extreme
-::rbink::brink
-::thurst::thrust
-::wehter::whether
-::throught::through
-::wrodless::wordless
-::convo::conversation
-::dep::deep
-::stragner::stranger
-::thougth::thought
-::ntohing::nothing
-::ju8st::just
-::snet::sent
-::hopeing::hoping
-::ac couple::a couple
-::tyme::time
-::thiking::thinking
-::autohotkey::AutoHotkey
-::autocorect::auto-correct
-::haivng::having
-::openes::opens
-::wtithout::without
-::keypoard::keyboard
-::oce::once
-::writiung::writing
-::abbreviateions::abbreviations
-::german::German
-::its::it's
-::itss::its
-::logitech::Logitech
-::razer::Razer
-::efffort::effort
-::imporatntly::importantly
-::photoshop::Photoshop
-::overhault::overhauled
-::illl::I'll
-::bec::because
-::eben::even
-::wekend::weekend
-::ari::air
-::supsect::suspect
-::iirc::if I recall correctly
-::afiliate::affiliate
-::roomate::roommate
-::rommates::roommates
-::loinger::longer
-::mor::more
-::profesionaly::professionally
-::exactyl::exactly
-::usabel::usable
-::youre::you're
-::palceholder::placeholder
-::whats::what's
-::defo::definitely
-::event hough::even though
-::fav::favorite
-::developement::development
-::serio9us::serious
-::ebooks::e-books
-::structurizing::structuring
-::harddrive::hard drive
-::plotholes::plot holes
-::aout::about
-::focussing::focusing
-::self publisher::self-publisher
-::bluetooth::Bluetooth
-::esp::especially
-::pl�us::plus
-::prety::pretty
-::russian::Russian
-::genertor::generator
-::soemthing::something
-::neve3r::never
-::smothly::smoothly
-::rn::right now
-::accouhnt::account
-::pls::please
-::anyones::anyone's
-::retweetet::retweeted
-::aint::ain't
-::theres::there is
-::beca::because
-::worthwile::worthwhile
-::sturggle::struggle
-::youll::you'll
-::proivde::provide
-::tos ay::to say
-::accs::accounts
-::wuickly::quickly
-::fro::for
-::bc::because
-::worpdress::wordpress
-::pics::pictures
-::learend::learned
-::flashight::flashlight
-::thist::this
-::twnty::twenty
-::affectionally::affectionately
-::wihtin::within
-::wikipedia::Wikipedia
-::aricle::article
-::dashbaord::dashboard
-::termn::term
-::sometims::sometimes
-::youtube::YouTube
-::fe.::for example
-::somteims::sometimes
-::onloine::online
-::europe::Europe
-::taiga::Taiga
-::withotu::without
-::coruse::course
-::scepticism::skepticism
-::hwo::how
-::striclty::strictly
-::yoursefl::yourself
-::cold war::Cold War
-::russians::Russians
-::ahveing::having
-::throguh::through
-::wuicker::quicker
-::theyre::they're
-::btw::by the way
-::ofc::of course
-::dindt::didn't
-::youtueb::YouTube
-::proiftable::profitable
-::idito::idiot
-::vanisches::vanishes
-::exageration::exaggeration
-::exxageration::exaggeration
-::frnakly::frankly
-::wihin::within
-::lucury::luxury
-::aksing::asking
-::difrent::different
-::skils::skills
-::genreally::generally
-::regualr::regular
-::compayn::company
-::frinds::friends
-::senteces::sentences
-::someoen::someone
-::actaully::actually
-::concience::conscience
-::havent::haven't
-::feautre::feature
-::whos::who's
-::wrost::worst
-::aynmore::anymore
-::somoen::someone
-::poitns::points
-::convos::conversations
-::lifestreams::live streams
-::coworkers::co-workers
-::flasw::flaws
-::stafed::staffed
-::caleld::called
-::event he::even the
-::rhethoric::rhetoric
-::american::American
-::watied::waited
-::pletny::plenty
-::afterwards::afterward
-::corrobated::corroborated
-::an d::and
-::mnore::more
-::constnatly::constantly
-::ewll::well
-::ithw::with
-::welll::we'll
-::brainstomr::brainstorm
-::ty::thank you
-::automtated::automated
-::constatnly::constantly
-::bundh::bunch
-::folowers::followers
-::idd::I would
-::sem::seem
-::anone::anyone
-::chernobyl::Chernobyl
-::seemd::seemed
-::higly::highly
-::maarine::marine
-::abit::a bit
-::russia::Russia
-::odditiy::oddity
-::trhough::through
-::germany::Germany
-::swedes::Swedes
-::thema ll::them all
-::murmansk::Murmansk
-::bekomes::becomes
-::accoridng::according
-::apprently::apparently
-::relaible::reliable
-::americans::Americans
-::begane::began
-::grandfahter::grandfather
-::poweris::power is
-::horor::horror
-::yotuube::YouTube
-::subscirbers::subscribers
-::probly::probably
-::someones::someone's
-::theis::this
-::thrity::thirty
-::accoutn::account
-::arent::aren't
-::naivity::naivety
-::maek::make
-::rom::room
-::wuite::quite
-::poitn::point
-::masive::massive
-::hasle::hassle
-::tof ind::to find
-::geta::get a
-::smal::small
-::comission::commission
-::ona::on a
-::oyu::you
-::tow rite::to write
-::experiemnt::experiment
-::storylines::story lines
-::tehn::then
-::coworker::co-worker
-::frienldy::friendly
-::thoguht::thought
-::skillsets::skill sets
-::coupel::couple
-::browing::browsing
-::differntly::differently
-::mysogynistic::misogynistic
-::environemnt::environment
-::appropiately::appropriately
-::behaviour::behavior
-::wihtotu::without
-::nothc::notch
-::eqully::equally
-::bodiyl::bodily
-::medicien::medicine
-::wnted::wanted
-::eventing::evening
-::btoh::both
-::cuase::cause
-::anthing::anything
-::ive::I've
-::awy::away
-::handt::hadn't
-::depp::deep
-::avter::after
-::dindtn::didn't
-::dowsn::down
-::slep::sleep
-::icant::I can't
-::laredy::already
-::btu�::but
-::kennedy::Kennedy
-::outlayed::outlaid
-::gratned::granted
-::suti::suit
-::rethoric::rhetoric
-::differtn::different
-::boguht::bought
-::beople::people
-::seeve::sieve
-::buaerocracy::bureaucracy
-::suspicous::suspicious
-::misappropiated::misappropriated
-::Serivec::Service
-::truyl::truly
-::adnventure::adventure
-::endeavour::endeavor
-::wildnerss::wilderness
-::event hen::even then
-::tehm::them
-::Julai::Julia
-::propbably::probably
-::thouroughly::thoroughly
-::slihglty::slightly
-::tetth::teeth
-::frigtheningly::frighteningly
-::reaon::reason
-::blant::bland
-::satifsfied::satisfied
-::caughed::coughed
-::worhtwile::worthwhile
-::thaks::thanks
-::ben::been
-::mening::meaning
-::anvigation::navigation
-::etierh::either
-::considereing::considering
-::amateru::amateur
-::indiviual::individual
-::reson::reason
-::moneitzed::monetized
-::whaat::what
-::numer::number
-::imporant::important
-::firend::friend
-::faovr::favor
-::hteres::there's
-::fulfil::fulfill
-::flawsbut::flaws but
-::eclusive::exclusive
-::actievly::actively
-::stors::stores
-::winodw::window
-::eitehr::either
-::soemthing::something
-::inmidst::in midst
-::prefered::preferred
-::appraoch::approach
-::fascianting::fascinating
-::wihtout::without
-::suprassed::surpassed
-::lemongrass::lemon grass
-::paly::play
-::john::John
-::london::London
-::livign::living
-::slgihtly::slightly
-::suspicioun::suspicion
-::awsome::awesome
-::hiinted::hinted
-::realte::relate
-::failible::fallible
-::earend::earned
-::puls::pulls
-::realizty::reality
-::ariving::arriving
-::mentined::mentioned
-::prev::previous
-::ecactly::exactly
-::reasonst::reasons
-::adolescence::adolescence
-::english::English
-::rasons::reasons
-::twoard::toward
-::info::information
-::vaction::vacation
-::evn::even
-::blatatn::blatant
-::reaons::reasons
-::yyour::your
-::moemnt::moment
-::naugthy::naughty
-::expext::expect
-::useufu::useful
-::lets::let's
-::attemtp::attempt
-::pron::porn
-::fals::falls
-::emtions::emotions
-::setnences::sentences
-::carefuly::carefully
-::worht::worth
-::horu::hour
-::secual::sexual
-::temporarly::temporarily
-::piont::point
-::ahad::had
-::realiezd::realized
-::carefuly::carefully
-::maintinating::maintaining
-::uncerned::unconcerned
-::givent he::given the
-::beenfit::benefit
-::paygrade::pay-grade
-::eveen::even
-::retirment::retirement
-::frankyl::frankly
-::inces::inches
-::stil::still
-::necessarly::necessarily
-::surfave::surface
-::hgihest::highest
-::walzed::waltzed
-::facebook::Facebook
-::noticedthe::noticed the
-::soemthng::something
-::sahre::share
-::anectodes::anecdotes
-::curiculum::curriculum
-::consistet::consisted
-::south::South
-::texas::Texas
-::inheritely::inherently
-::oldtimer::old timer
-::engaing::engaging
-::swalloed::swallowed
-::wordl::world
-::everonye::everyone
-::bandwiht::bandwidth
-::admitteldy::admittedly
-::probabyl::probably
-::moement::moment
-::moemnts::moments
-::formss::forms
-::Renessaince::Renaissance
-::eihter::either
-::mgiht::might
-::obv::obvious
-::somehting::something
-::similarites::similarities
-::drwoing::drowning
-::jealosy::jealousy
-::montsh::months
-::iwht::with
-::beween::between
-::mysoginist::misogynist
-::realtionships::relationships
-::otehre::other
-::soemtimes::sometimes
-::event aht::even that
-::Imade::I made
-::Iwas::I was
-::shoing::showing
-::steppting::stepping
-::distiguished::distinguished
-::infront::in front
-::tha tpoint::that point
-::underttok::undertook
-::everyones::everyone's
-::acknoledgment::acknowledgement
-::thtat::that
-::togetehr::together
-::isalnd::island
-::mallorca::Mallorca
-::aroundme::around me
-::envionment::environment
-::teambuilding::team building
-::engange::engage
-::Theere::There
-::spanish::Spanish
-::madrid::Madrid
-::facetted::faceted
-::honst::honest
-::anoying::annoying
-::matres::mattress
-::seeemd::seemed
-::lifteim::lifetime
-::cahnge::change
-::aboused::abused
-::someonbe::someone
-::forteen::fourteen
-::bexond::beyond
-::ocuple::couple
-::picutre::picture
-::calculater::calculator
-::ffound::found
-::wold::world
-::virutally::virtually
-::coincidentially::coincidentally
-::experinemnting::experimenting
-::thoguth::thought
-::wuitting::quitting
-::acomment::a comment
-::compnay::company
-::sedning::sending
-::devs::developers
-::opinoin::opinion
-::weree::we're
-::itll::it'll
-::ithelps::it helps
-::everywone::everyone
-::pertty::pretty
-::cornder::corner
-::betwwen::between
-::lesons::lessons
-::publsihing::publishing
-::echochamber::echo chamber
-::askiing::asking
-::nothgin::nothing
-::tumblr::Tumblr
-::reddit::Reddit
-::scrivener::Scrivener
-::publihs::publish
-::abook::a book
-::combo::combination
-::milliions::millions
-::wrtiing::writing
-::wrting�::writing
-::planing�::planning
-::publihsing�::publishing
-::owords::words
-::consitent::consistent
-::planing::planning
-::wiritng�::writing
-::brianstorming::brainstorming
-::distractive::distracting
-::powerhorse::power horse
-::environ::environment
-::utick::untick
-::checkboxes::check boxes
-::chainging::changing
-::favs::favorites
-::GDocs::Google Docs
-::wirting::writing
-::fb::Facebook
-::eery::every
-::straiing::straining
-::galring::glaring
-::corret::correct
-::tpying::typing
-::soemhow::somehow
-::platfrom::platform
-::differetn::different
-::I#ll::I'll
-::aren#t::aren't
-::ture::true
-::that#s::that's
-::tehre::there
-::oen::one
-::publiish::publish
-::proibably::probably
-::fifnishing::finishing
-::contentn::content
-::contnet::content
-::won#t::won't
-::consise::concise
-::doesn#t::doesn't
-::ahving::having
-::soemeone::someone
-::contetn::content
-::beocme::become
-::desktoip::desktop
-::prtty::pretty
-::commetn::comment
-::alot::a lot
-::arrogatn::arrogant
-::bene::been
-::stephen::Stephen
-::someoen::someone
-::finsihing::finishing
-::subsidised::subsidized
-::harldy::hardly
-::i#m::I'm
-::ta::at
-::padi::paid
-::powerered::powered
-::metnion::mention
-::respectufl::respectful
-::oyur::your
-::crompromise::compromise
-::morepowerful::more powerful
-::godo::good
-::rmeember::remember
-::condescening::condescending
-::wory::worry
-::don#t::don't
-::havein::have in
-::withit::with it
-::covno::conversation
-::oldschool::old-school
-::schooll::school
-::publihsing::publishing
-::openeing::opening
-::anyboy::anybody
-::christmas::Christmas
-::tok::took
-::immunue::immune
-::websitex::websites
-::ipad::iPad
-::eidting::editing
-::fiverr::Fiverr
-::monbth::month
-::persepective::perspective
-::iditos::idiots
-::AHK::AutoHotkey
-::multipe::multiple
-::actula::actual
-::intoa::into a
-::maybw::maybe
-::nvoel::novel
-::soemthing::something
-::ebook::e-book
-::foir::for
-::stres::stress
-::biult::built
-::netflix::Netflix
-::funa nd::fun and
-::annyoing::annoying
-::brainstomring::brainstorming
-::pyhton::python
-::int his::in this
-::onw::own
-::swtich::switch
-::mac::Mac
-::prorbbaly::probably
-::productivtiy::productivity
-::learna lot::learn a lot
-::everyhting::everything
-::wiritng::writing
-::foxus::focus
-::ylearly::clearly
-::fishined::finished
-::elimated::eliminated
-::beter::better
-::stoped::stopped
-::cruical�::crucial
-::disconected::disconnected
-::spotify::Spotify
-::scrren::screen
-::learnd::learned
-::weeked::weekend
-::warior::warrior
-::oaky::okay
-::problmes::problems
-::producitity::productivity
-::qhy::why
-::produtivity::productivity
-::producitve::productive
-::midle::middle
-::difrernt::different
-::surprsie::surprise
-::incoherrent::incoherent
-::ourrselves::ourselves
-::bushfires::bush fires
-::backend::back-end
-::realied::realized
-::tomake::to make
-::welath::wealth
-::surive::survive
-::thoguhts::thoughts
-::accomplishmetn::accomplishment
-::youhavent::you haven't
-::susstain::sustain
-::comapred::compared
-::motly::mostly
-::dirivng::driving
-::generalisation::generalization
-::witout::without
-::wehne::when
-::stepepd::stepped
-::oine::one
-::motivte::motivate
-::dialy::daily
-::importatnly::importantly
-::exped::experienced
-::sceptical::skeptical
-::raom::roam
-::withut::without
-::envrion::environment
-::freedome::freedom
-::tomorow::tomorrow
-::irresponisbile::irresponsible
-::appaled::appalled
-::creted::created
-::becomea::become a
-::tha t::that
-::youhave::you have
-::onthat::on that
-::proposenew::propose new
-::clohting::clothing
-::feling::feeling
-::onthem::on them
-::woordworking::wood-working
-::surprsiinly::surprisingly
-::conveninet::convenient
-::simpel::simple
-::workahoic::workaholic
-::ewak::weak
-::certainyl::certainly
-::configuarion::configuration
-::idot::idiot
-::cahnges::changes
-::iddnt::didn't
-::someoen::someone
-::probabaly::probably
-::constnatly::constantly
-::metting::meeting
-::cafeine::caffeine
-::pseak::speak
-::ihad::I had
-::importanlty::importantly
-::anoyne::anyone
-::rason::reason
-::exxagerated::exaggerated
-::hunred::hundred
-::abot::about
-::nknow::know
-::hapy::happy
-::repuation::reputation
-::explaingin::explaining
-::cirumvent::circumvent
-::hoenst::honest
-::flors::floors
-::watchedthe::watched the
-::foour::four
-::becoms::becomes
-::excersise::exercise
-::excercise::exercise
-::mayn::many
-::builind::building
-::oither::other
-::os::so
-::lauging::laughing
-::runiung::running
-::twetny::twenty
-::antoerh::another
-::cratf::craft
-::eno0ugh::enough
-::lopp::loop
-::hzere::here
-::psent::spent
-::desier::desire
 ::masage::massage
-::thights::thighs
-::otuside::outside
-::enfuriating::infuriating
-::peple::people
-::hiim::him
-::entereing::entering
-::fromseeing::from seeing
-::moer::more
-::cahnce::chance
-::retuning::returning
-::tomanaging::to managing
-::btter::better
-::diffrernt::different
-::aprentice::apprentice
-::lsightly::slightly
-::tuaght::taught
-::assmeble::assemble
-::repeeat ed::repeated
-::bloging::blogging
-::imaginery::imaginary
-::hudnred::hundred
-::thgouth::thought
-::certianly::certainly
-::gneeral::general
-::htose::those
-::nothihgn::nothing
-::oens::ones
-::celebreties::celebrities
-::nmost::most
-::constnaly::constantly
-::usre::sure
-::ncie::nice
-::thinsg::things
-::activley::actively
-::abo0ut::about
-::appearnces::appearances
-::cruciall::crucial
-::foucs::focus
-::wortht he�::worth the
-::muchmoney::much money
-::pruchase::purchase
-::muh::much
-::butmany::but many
-::twnety::twenty
-::broek::broke
-::anythzing::anything
-::origianlly::originally
-::wihtout::without
-::initail::initial
-::disappiears::disappears
-::ans::and
-::anbgle::angle
-::inadvertedly::inadvertently
-::visble::visible
-::trainyard::train yard
-::a lmost::almost
-::coloured::colored
-::finanically::financially
-::aolredy::already
-::substitue::substitute
-::sesion::session
-::doestn::doesn't
-::fel::feel
-::wrtingn::writing
-::tpying::typing
-::theree::there
-::gnerator::generator
-::wholething::whole thing
-::htree::three
-::importatnyl::importantly
-::tolink::to link
-::somewho::somehow
-::atht::that
-::considertations::considerations
-::rebuilidn::rebuilding
-::apalled::appalled
-::roleplaying::role-playing
-::patreon::Patreon
-::preapred::prepared
-::tow ork::to work
-::imrpove::improve
-::prety::pretty
-::chaning::changing
-::decenty::decently
-::rathter::rather
-::couldnbt::couldn't
-::btoh::both
-::satifying::satisfying
-::istn::isn't
-::substitutded::substituted
-::peoploe::people
-::oiut::out
-::hunbt::hunt
-::ifgurative::figurative
-::yo9urself::yourself
-::listeing::listening
-::decidedyl::decidedly
-::publsihed::published
-::rightuflly::rightfully
-::amyn::many
-::horus::hours
-::visititors::visitors
-::inadvertly::inadvertently
-::sydney::Sydney
-::usecases::use-cases
-::tomorwo::tomorrow
-::frontend::front-end
-::suced::succeed
-::itno::into
-::finsihed::finished
-::asshoel::asshole
-::corect::correct
-::maintencance::maintenance
-::eral::real
-::haven#t::haven't
-::neeed::need
-::unecesary::unnecessary
-::atm::at the moment
-::vid::video
-::proejcts::projects
-::rpetty::pretty
-::oild::old
-::componentes::components
-::enouhg::enough
-::worte::wrote
-::antoher::another
-::coherrent::coherent
-::comined::combined
-::vids::videos
-::markiet::market
-::watned::wanted
-::ofrget::forget
-::situtaion::situation
-::happeend::happened
-::unuasble::unusable
-::ahrd::hard
-::tiwce::twice
-::mistyped::miss-typed
-::allt he::all the
-::increasinly::increasingly
-::percet::percent
-::previoulsy::previously
-::begrudignly::begrudgingly
-::cowoker::co-worker
-::jenkins::Jenkins
-::tema::team
-::transistioned::transitioned
-::useles::useless
-::alltogether::altogether
-::corrobate::corroborate
-::stillhere::still here
-::googleing::googling
-::easyier::easier
-::Gemany::Germany
-::mabye::maybe
-::buisiness::business
-::ksills::skills
-::somehwere::somewhere
-::beatuiful::beautiful
-::aquired::acquired
-::mien::mine
-::hositng::hosting
-::tutoiral::tutorial
-::seomthing::something
-::dooubt::doubt
-::genereal::general
-::Bascially::Basically
-::antoehr::another
-::incoherrent::incoherent
-::compleltey::completely
-::btu::but
-::eigthy::eighty
-::movments::movements
-::sahres::shares
-::claled::called
-::appearnce::appearance
-::morive::movie
-::efect::effect
-::dialouge::dialogue
-::understant::understand
-::inevtiable::inevitable
-::isntagram::Instagram
-::kep::keep
-::yoruself::yourself
-::tohaving::to having
-::indepence::independence
-::mysself::myself
-::woth::worth
-::hopefulyl::hopefully
-::hegiht::height
-::deleteing::deleting
-::abbrs::abbreviations
-::corection::correction
-::magicaly::magically
-::corected::corrected
-::tpyed::typed
-::erors::errors
-::bok::book
-::leters::letters
-::wuick::quick
-::exaclty::exactly
-::enjoybale::enjoyable
-::loit::lot
-::deseases::diseases
-::totlay::totally
-::difrent::different
-::helful::helpful
-::ahaving::having
-::enthusiams::enthusiasm
-::importatnt::important
-::indiviudla::individual
-::amoment::a moment
-::onlien::online
-::wolrd::world
-::publsih::publish
-::eficient::efficient
-::amybe::maybe
-::wrtie::write
-::propell::propel
-::fance::fancy
-::usper::super
-::difernet::different
-::aveneu::avenue
-::wite::write
-::peole::people
-::obstrusive::obtrusive
-::chalenges::challenges
-::webstie::website
-::iste::site
-::erotcia::erotica
-::amlost::almost
-::litlte::little
-::experimetning::experimenting
-::wiuth::with
-::osme::some
-::porjects::projects
-::noen�::none
-::ptential::potential
-::sleping::sleeping
-::sutpid::stupid
-::wtiht::with
-::chacnes::chances
-::youd::you would
-::sinlge::single
-::wesbite::website
-::aimleslly::aimlessly
-::alte::late
-::campter::camper
-::hoby::hobby
-::wel::well
-::skilsl::skills
-::understadn::understand
-::hwere::where
-::aynway::anyway
-::tomoreo::tomorrow
-::applyiing::applying
-::differnce::difference
-::betwen::between
-::sumamrize::summarize
-::infact::in fact
-::subscribres::subscribers
-::goood::good
-::oin::on
-::wastn::wasn't
-::nthen::then
-::apreciate::appreciate
-::disfunctional::dysfunctional
-::puzle::puzzle
-::thouhgts::thoughts
-::leraning::learning
-::fe::for example
-::nohting::nothing
-::dolar::dollar
-::companeis::companies
-::insanley::insanely
-::pictrue::picture
-::breadcrump::breadcrumb
-::aproach::approach
-::donw::down
-::temas::teams
-::aversity::adversity
-::memebers::members
-::billards::billiards
-::rember::remember
-::mehtod::method
-::perioud::period
-::keping::keeping
-::ihave::I have
-::triying::trying
-::meatime::meantime
-::useufl::useful
-::thousnad::thousand
-::ebook::e-book
-::hve::have
-::wnet::went
-::realtiy::reality
-::amodern::a modern
-::probelmes::problems
-::stie::site
-::pullme::pull me
-::repsonse::response
-::verseion::version
-::ultiamtely::ultimately
-::realiable::reliable
-::stanind::standing
-::shouzld::should
-::actully::actually
-::productily::productively
-::neglicence::negligence
-::beofre::before
-::anserweing::answering
-::singel::single
-::Surprisnlgy::Surprisingly
-::strugles::struggles
-::intricies::intricacies
-::skillset::skill set
-::absolutly::absolutely
-::teim::time
-::ntohing::nothing
-::swrod::sword
-::damgaes::damages
-::fells::feels
-::bigged::bugged
-::wrting::writing
-::inlflux::influx
-::importatntly::importantly
-::constntaly::constantly
-::anonye::anyone
-::eihter::either
-::mousewheel::mouse wheel
-::minuites::minutes
-::noitce::notice
-::relase::release
-::universially::universally
-::presenation::presentation
-::broed::bored
-::etiher::either
-::teacerh::teacher
-::transering::transferring
-::qwuikcly::quickly
-::finsihsed::finished
-::wirte::write
-::alsways::always
-::ussually::usually
-::incoem::income
-::englsih::English
-::langauge::language
-::eventaully::eventually
-::otherworldy::otherworldly
-::probide::provide
-::helathy::healthy
-::msitake::mistake
-::sturggled::struggled
-::beneift::benefit
-::Cleint::Client
-::puposes::purposes
-::github::Github
-::generaotr::generator
-::algo::algorithm
-::loks::looks
-::desing::design
-::powerufl::powerful
-::proabbyl::probably
-::provite::provide
-::meting::meeting
-::roms::rooms
-::freeodm::freedom
-::seriosu::serious
-::hosintg::hosting
-::producitviy::productivity
-::bucnh::bunch
-::worreis::worries
-::instagram::Instagram
-::prgramming::programming
-::eslewhere::elsewhere
-::significatn::significant
-::disgrunteled::disgruntled
-::absoultey::absolutely
-::becoime::become
-::misoginy::misogyny
-::niether::neither
-::unles::unless
-::preyy::pretty
-::hapy::happy
-::guinness::Guinness
-::w/o::without
-::wo.::without
-::rrom::room
-::exclusing::excluding
-::unkonw::unknown
-::sity::city
-::midn::mind
-::ofpeople::of people
-::inocme::income
-::promopt::prompt
-::spritis::spirits
-::slef::self
-::standpoitn::standpoint
-::inwented::invented
-::repetitve::repetitive
-::proiblem::problem
-::angualr::angular
-::biuld::build
-::differen::different
-::balgame::ballgame
-::learniung::learning
-::weve::we've
-::oif::of
-::stuf::stuff
-::withuto::without
-::disapointment::disappointment
-::repition::repetition
-::les::less
-::impactul::impactful
-::Lt.::Lieutenant
-::porbably::probably
-::stragiht::straight
-::clelar::clear
-::disappointemnt::disappointment
-::slihgtest::slightest
-::mirroed::mirrored
-::guadds::guards
-::behidn::behind
-::rbougth::brought
-::wihs::wish
-::samll::small
-::haappens::happens
-::beind::behind
-::wlaking::walking
-::foresty::forestry
-::billard::billiard
-::atosphere::atmosphere
-::realxed::relaxed
-::walekd::walked
-::stright::straight
-::Comamnder::Commander
-::statr::start
-::girn::grin
-::endup::end up
-::squadmate::squad mate
-::unpredicatble::unpredictable
-::wisched::wished
-::judgement::judgement
-::ybout::about
-::frey::fray
-::figners::fingers
-::ehtic::ethic
-::withotuo::without
-::rasing::raising
-::contatined::contained
-::seting::setting
-::diference::difference
-::reder::reader
-::stffu::stuff
-::fidning::finding
-::qualtiy::quality
-::impelemnt::implement
-::middel::middle
-::specificially::specifically
-::alwys::always
-::unhealhty::unhealthy
-::ceratin::certain
-::beauy::beauty
-::boredeom::boredom
-::turck::truck
-::tabel::table
-::documumenation::documentation
-::nowehre::nowhere
-::powertools::power tools
-::fruther::further
-::somehwo::somehow
-::isues::issues
-::hlaf::half
-::intermittened::intermittent
-::toegehter::together
-::indepencence::independence
-::novemeber::November
-::netered::entered
-::effrot::effort
-::topcs::topics
-::simliar::similar
-::prodest::proudest
-::vaccuum::vacuum
-::difrence::difference
-::noen::none
-::apth::path
-::questionale::questionable
-::espeically::especially
-::defintieyl::definitely
-::imagien::imagine
-::priorty::priority
-::ivews::views
-::actiely::actively
-::sek::seek
-::stnading::standing
-::compay::company
-::fiar::fair
-::thrwon::thrown
-::ehlp::help
-::monye::money
-::alltogehter::altogether
-::ful::full
-::apartmetn::apartment
-::wuarter::quarter
-::cousr::course
-::dthem::them
-::metnal::mental
-::ahvent::havent
-::aparmtetn::apartment
-::relly::really
-::loking::looking
-::workbehnch::workbench
-::essentailly::essentially
-::measl::meals
-::wihch::which
-::telliong::telling
-::questions::questions
-::deskotp::desktop
-::ni::in
-::notebokk::notebook
-::produtictiy::productivity
-::doiong::doing
-::becond::beyond
-::undepaid::underpaid
-::productiviy::productivity
-::proudcitvy::productivity
-::engrained::ingrained
-::thingst hat::things that
-::anyoine::anyone
-::earnthem::earn them
-::ofthem::of them
-::conencted::connected
-::dreamt::dreamed
-::differencde::difference
-::moden::modern
-::rewerse::reverse
-::int hat::in that
-::brekaing::breaking
-::fre::free
-::collegaeus::colleagues
-::ddint::didn't
-::goten::gotten
-::soner::sooner
-::miuntes::minutes
-::amateuer::amateur
-::volunterr::volunteer
-::actaulyl::actually
-::thining::thinking
-::roder::order
-::lviing::living
-::promtoting::promoting
-::altogeher::altogether
-::tirp::trip
-::plying::playing
-::invalubale::invaluable
-::gte::get
-::jounrey::journey
-::accidentially::accidentally
-::choise::choice
-::timeframe::time frame
-::nowheere::nowhere
-::motnh::month
-::goint::going
-::wroth::worth
-::wigle::wiggle
-::rom::room
-::planeed::planned
-::windchimes::wind chimes
-::workspaces::work spaces
-::froma::from a
-::deterioated::deteriorated
-::magentfishing::magnetfishing
-::spain::Spain
-::neverending::never-ending
-::pitures::pictures
-::resotred::restored
-::scrp::scrap
-::iwhtout::without
-::froim::from
-::drvie::drive
-::se::see
-::remembner::remember
-::rbing::bring
-::brian::brain
-::monologe::monologue
-::sturgels::struggles
-::ikr::I know, right?!
-::swithces::switches
-::smileing::smiling
-::embarrasingly::embarrassing
-::gigle::giggle
-::tho0ughts::thoughts
-::disapointed::disappointed
-::wrose::worse
-::flacid::flaccid
-::shoews::shows
-::valueing::valuing
-::respoonsible::responsible
-::paretns::parents
-::autpilot::autopilot
-::wincend::winced
-::act5ually::actually
-::actuyll::actually
-::paygrade::pay grade
-::instil::instill
-::cringeworthy::cringe-worthy
-::birght::bright
-::stregnth::strength
-::protext::protect
-::worhtless::worthless
-::forst::forest
-::qho::who
-::solider::soldier
-::daugher::daughter
-::improtant::important
-::momenbt::moment
-::smokey::smoky
-::Luara::Laura
-::seeling::selling
-::comprehenisve::comprehensive
-::publihsed::published
-::notificiation::notification
-::illegitame::illegitimate
-::kindom::kingdom
-::carst::carts
-::togheter::together
-::fashionn::fashion
-::lookedd::looked
-::bateries::batteries
-::assshole::asshole
-::pityful::pitiful
-::meagre::meager
-::toal::total
-::sje::she
-::techer::teacher
-::unimportatn::unimportant
-::lillte::little
-::anice::a nice
-::enganged::engaged
-::particularyl::particularly
-::typer::typist
-::busyiest::busiest
-::brougth::brought
-::annyoingly::annoyingly
-::builidng::building
-::broing::boring
-::routinley::routinely
-::promtoed::promoted
-::pragnency::pregnancy
-::sadi::said
-::heatlyh::healthy
-::ignroe::ignore
-::sacrifies::sacrifices
-::compeltely::completely
-::complately::completely
-::monht::month
-::demed::deemed
-::liike::like
-::takeing::taking
-::workting::working
-::tols::tools
-::cretures::creatures
-::tuiton::tuition
-::couild::could
-::chian::chain
-::excersise::exercise
-::handtrucks::hand trucks
-::survie::survive
-::bunhc::bunch
-::leagal::legal
-::accomonate::accommodate
-::pullups::pull-ups
-::disassmeble::disassemble
-::yesterdays::yesterday's
-::bittenress::bitterness
-::qhich::which
-::arragement::arrangement
-::expenisve::expensive
-::gettting::getting
-::beenfits::benefits
-::multitool::multi tool
-::holt::hold
-::regalrdess::regardless
-::pelase::please
-::tow atch::to watch
-::folling::following
-::recodring::recording
-::sepnding::spending
-::whnever::whenever
-::mange::manage
-::gopro::GoPro
-::ffar::far
-::powerbank::power bank
-::recordning::recording
-::havppy::happy
-::hopiong::hoping
-::yoututbe::YouTube
-::falen::fallen
-::weekened::weekend
-::publc::public
-::therell::there'll
-::confo::conference
-::theis::this
-::poice::police
-::programmibng::programming
-::mak ethe::make the
-::maintable::maintainable
-::asap::as soon as possible
-::tiime::time
-::eiather::either
-::tehir::their
-::didndt::didn't
-::magent::magnet
-::favortie::favorite
-::laptp::laptop
-::screns::screens
-::Feddback::Feedback
-::happneed::happened
-::earlly::early
-::myslef::myself
-::ntoice::notice
-::iether::either
-::mmove::move
-::tomoroow::tomorrow
-::rhtough::through
-::fasion::fashion
-::encouter::encounter
-::athing::a thing
-::ina::in a
-::joike::joke
-::helathy::healthy
-::smalelr::smaller
-::algoryhtm::algorythm
-::possibel::possible
-::bcuks::bucks
-::hopi9ng::hoping
-::tuts::tutorials
-::cammper::camper
-::maneable::manageable
-::covre::cover
-::bukcs::bucks
-::smaile::smile
-::winbd::wind
-::badn::band
-::geets::gets
-::expet::expect
-::scaray::scary
-::neihgbors::neighbors
-::familiy::family
-::cabale::capable
-::whhere::where
-::perfet::perfect
-::felel::feel
-::adive::advice
-::ahundred::a hundred
-::wuality::quality
-::coudlnt::couldn't
-::ddid::did
-::uterly::utterly
-::oir::or
-::hadning::handing
-::memebr::member
-::slowyl::slowly
-::friedn::friend
-::finidng::finding
-::interesteing::interesting
-::contatc::contact
-::eightth::eighth
-::fromt aht::from that
-::componetns::components
-::majory::majority
-::twelvth::twelfth
-::suddnely::suddenly
-::stoires::stories
-::conclulsion::conclusion
-::moire::more
-::manged::managed
-::biterness::bitterness
-::expereincing::experiencing
-::projectgs::projects
-::poist::post
-::usful::useful
-::idetnified::identified
-::puzlled::puzzled
-::continute::continue
-::peoplk::people
-::asume::assume
-::listenend::listened
-::hafl::half
-::stopeed::stopped
-::imporatn::important
-::bewaer::beware
-::interviewd::interviewed
-::conenction::connection
-::envionemnt::environment
-::construcing::constructing
-::ddi::did
-::partiicular::particular
-::ehllo::hello
-::torgue::torque
-::wsa::was
-::nowadys::nowadays
-::journy::journey
-::alittle::a little
-::windwo::window
-::aroiund::around
-::isprobably::is probably
-::afaik::as far as I know
-::producitivy::productivity
-::ashole::asshole
-::tthat::that
-::timeof::time
-::thte::the
-::delte::delete
-::swet::sweet
-::figued::figured
-::htemselves::themselves
-::inisde::inside
-::caant::can't
-::wheer::where
-::makita::Makita
-::tolls::tools
-::reasonbly::reasonably
-::buiying::buying
-::resing::resting
-::shufle::shuffle
-::rgular::regular
-::sovle::solve
-::soemwhere::somewhere
-::agreat::a great
-::notcie::notice
-::intermittend::intermittent
-::tbale::table
-::recoding::recording
-::hoep::hope
-::surprsingly::surprisingly
-::customzie::customize
-::wek::week
-::sometghin::something
-::experiemt::experiment
-::cmaper::camper
-::cammping::camping
-::outlandsih::outlandish
-::everythings::everything's
-::mindles::mindless
-::desperatley::desperately
-::alllowed::allowed
-::maxium::maximum
-::tzhe::the
-::workbecnh::workbench
-::folow::follow
-::locaion::location
-::ktichen::kitchen
-::fulkl::full
-::battereis::batteries
-::sapce::space
-::travleing::traveling
-::norway::Norway
-::pictrues::pictures
-::mroning::morning
-::muzch::much
-::peopelo::people
-::prbably::probably
-::wouild::would
-::uniquze::unique
-::cabel::cable
-::thakns::thanks
-::nihce::niche
-::contet::content
-::herslef::herself
-::interupting::interrupting
-::hnadful::handful
-::treasurehunt::treasure hunt
-::profilel::profile
-::uplaoded::uploaded
-::unerstand::understand
-::ineficient::inefficient
-::exacty::exactly
-::refil::refill
-::calender::calendar
-::vehilce::vehicle
-::wating::waiting
-::kno0w::know
-::friedns::friends
-::handufl::handful
-::facotry::factory
-::necessitiy::necessity
-::pratcital::practical
-::furninutre::furniture
-::neded::needed
-::luxurius::luxurious
-::loing::long
-::furnutre::furniture
-::obvsly::obviously
-::withcer::witcher
-::returniung::returning
-::nvm::nevermind
-::defintiely::definitely
-::easiyl::easily
-::amaziing::amazing
-::acces::access
-::queuue::queue
-::erorr::error
-::possbile::possible
-::authenticatiosn::authentications
-::configuation::configuration
-::betweent he::between the
-::aboiut::about
-::rememebered::remembered
-::encoutner::encounter
-::pasing::passing
-::armorered::armored
-::oinly::only
-::defualt::default
-::fels::feels
-::gruelsome::gruesome
-::scarfs::scarves
-::myslf::myself
-::miror::mirror
-::vietnam::Vietnam
-::havent::haven't
-::ocurse::course
-::makring::marking
-::immensily::immensely
-::waining::waning
-::onthis::on this
-::embelleshed::embellished
-::lithuania::Lithuania
-::near-by::nearby
-::eno0ug::enough
-::reclusives::recluses
-::distration::distraction
-::ime::in my experience
-::kiliing::killing
-::womans::woman's
-::mysoginy::misogyny
-::whicked::wicked
-::wiithout::without
-::sihgt::sight
-::ontop::on top
-::juzst::just
-::ordinance::ordnance
-::elses::else's
-::commital::committal
-::theings::things
-::someoine::someone
-::sentury::century
-::no0t::not
-::caputer::capture
-::WIth::with
-::curios::curious
-::sherrif::sheriff
-::terrifbly::terribly
-::glamerous::glamorous
-::appopriate::appropriate
-::foot notes::footnotes
-::unhealty::unhealthy
-::foward::forward
-::croptop::crop top
-::unwelcomed::unwelcome
-::soemthing::something
-::event hat::even that
-::laura::Laura
-::constand::constant
-::yourre::you're
-::fi::if
-::tha twas::that was
-::thingk::think
-::psoting::posting
-::beiung::being
-::baggagge::baggage
-::basemetn::basement
-::qucik::quick
-::uniwue::unique
-::Typgin::typing
-::somethting::something
-::majoriity::majority
-::wrinting::writing
-::awaare::aware
-::moentize::monetize
-::tot hat::to that
-::laucnh::launch
-::instnat::instant
-::smeile::smile
-::eveyone::everyone
-::anythig::anything
-::workgin::working
-::jim::Jim
-::soemthing::something
-::wouldhave::would have
-::chuckeld::chuckled
-::breahts::breaths
-::doen::done
-::eithr::either
-::pres::press
-::thema gain::them again
-::measn::means
-::everday::everyday
-::formelry::formerly
-::wrily::wryly
-::writng::writing
-::aspriing::aspiring
-::texh::tech
-::sovles::solves
-::somtihng::something
-::concernd::concerned
-::shortliived::short-lived
-::methodoligy::methodology
-::tiems::times
-::nutral::neutral
-::argueing::arguing
-::itme::time
-::nothig::nothing
-::tahts::that's
-::kithcen::kitchen
-::flor::floor
-::horific::horrific
-::lenghts::lengths
-::simplictiy::simplicity
-::experince::experience
-::authours::authors
-::roughtly::roughly
-::fasciantion::fascination
-::positon::position
-::improtantly::importantly
-::retiremnt::retirement
-::indepencen::independence
-::oponion::opinion
-::psot::post
-::alows::allows
-::bressing::pressing
-::butons::buttons
-::publicatiosn::publications
-::inevitiable::inevitable
-::somethignt::something
-::realyy::really
-::maried::married
-::expexts::expects
-::shrot::short
-::clohtes::clothes
-::devine::divine
-::ahdnt::hadn't
-::acknolodgment::acknowledgment
-::riase::raise
-::somhow::somehow
-::opportunies::opportunities
-::youc an::you can
-::enjoed::enjoyed
-::o'clok::o'clock
-::clok::clock
-::callled::called
-::ofthese::of these
-::compeet::compete
-::buring out::burning out
-::finsihsing::finishing
-::pleasrue::pleasure
-::proabbaly::probably
-::behaviro::behavior
-::enojy::enjoy
-::befals::befalls
-::sprial::spiral
-::maany::many
-::thazt::that
-::aply::apply
-::applky::apply
-::specifiv::specific
-::keyord::keyword
-::wriing::writing
-::exsiting::existing
-::spreadshet::spreadsheet
-::kepp::keep
-::seemeed::seemed
-::yers::years
-::schol::school
-::identfy::identify
-::tzhat::that
-::appplying::applying
-::ther eare::there are
-::wortha::worth a
-::yall::y'all
-::turorial::tutorial
-::thiss::this
-::recommed::recommend
-::intenrt::internet
-::unneded::unneeded
-::analkytics::analytics
-::wordls::worlds
-::aplle::apple
-::pwer::power
-::obsolte::obsolote
-::bowth::both
-::replicat ethe::replicate the
-::enhaning::enhancing
-::acitve::active
-::tbetwen::between
-::aroudn::around
-::hardrive::hard drive
-::directoy::directory
-::recentyl::recently
-::evny::envy
-::simeple::simple
-::meldoic::melodic
-::togetzher::together
-::outhere::out here
-::Ramyond::Raymond
-::justics::justice
-::inhis::in his
-::clousre::closure
-::shoter::shooter
-::duaghter::daughter
-::suiice::suicide
-::famlies::families
-::worhtwhile::worthwhile
-::Ihope::I hope
-::understnds::understands
-::bullslhitting::bullshitting
-::understod::understood
-::ifrst::first
-::rooom::room
-::tha tnight::that night
-::taks::takes
-::th eother::the other
-::th e::the
-::infacted::infected
-::acvance::advance
-::redemmed::redeemed
-::wouldkill::would kill
-::kil::kill
-::negotiatoin::negotiation
-::maeks::makes
-::monring::morning
-::strucutre::structure
-::enoguh::enough
-::grined::grinned
-::rnasom::ransom
-::afte rthem::after them
-::soemoen::someone
-::dedided::decided
-::coem::come
-::youhad::you had
-::crrek::creek
-::publicatoin::publication
+::Persoanlly::personally
 ::I'llhave::I'll have
-::applicatoin::application
-::liminted::limited
-::databese::database
-::amdin::admin
-::paoin::pain
-::conencts::connects
-::sincehe::since he
-::speek::speak
-::coyping::copying
-::lateyl::lately
-::twiter::twitter
-::assing::assign
-::actal::actual
-::jekyl::Jekyll
-::effor tinto::effort into
-::co9uld::could
-::hitn::hint
-::amaziang::amazing
-::ewxample::example
+::understnds::understands
+::weree::we're
+::flwo::flow
+::sturgle::struggle
+::psoible::possible
+::maeks::makes
+::probly::probably
+::productily::productively
+::wiritng::writing
+::haven#t::haven't
+::sapce::space
+::ussually::usually
+::mentined::mentioned
+::photoshop::Photoshop
+::specificially::specifically
+::profilel::profile
+::sepcifaily::specifically
+::momenbt::moment
+::enougha nd::enough and
+::plotholes::plot holes
+::seomthing::something
+::secdond::second
+::france::France
+::absolutley::absolutely
+::psot::post
+::carfty::crafty
+::manouvrable::manoeuvrable
+::evn::even
+::everoyne::everyone
+::pipleine::pipeline
+::habiots::habits
+::navigatre::navigate
+::hesitte::hesitate
+::aboslte::absolute
+::adolescence::adolescence
+::selcet::select
+::enthusiams::enthusiasm
+::soemwhere::somewhere
+::simeple::simple
+::anone::anyone
+::stepepd::stepped
+::Dolalrs::Dollars
+::keybpard::keyboard
+::downt::don't
+::pput::put
+::independt::independent
+::browswers::browsers
+::motnhs::months
+::ptential::potential
+::usful::useful
+::paly::play
+::actula::actual
+::radious::radius
+::sleping::sleeping
+::umprella::umbrella
+::wiuth::with
+::ocde::code
+::provice::provide
+::unwelcomed::unwelcome
+::probolems::problems
+::calender::calendar
+::inadvertedly::inadvertently
+::belieavable::believable
+::truyl::truly
+::tehir::their
+::developmtn::development
+::anectodes::anecdotes
+::differntly::differently
+::alltogether::altogether
+::oyur::your
+::tolink::to link
+::mechanciaal::mechanical
+::timeframe::time frame
+::ofc::of course
+::inheritely::inherently
+::yoou::you
+::ltitle::little
+::desgns::designs
+::earnthem::earn them
+::indec::index
+::fixgin::fixing
+::ryhtm::rhythm
+::foot notes::footnotes
+::bruned::burned
+::ntohgin::nothing
+::nakeness::nakedness
+::sertain::certain
+::rihgt::right
+::disturbe::disturb
+::verseion::version
+::btter::better
+::sutpid::stupid
+::automtated::automated
+::cofe::coffee
+::webstie::website
+::differencde::difference
+::anserweing::answering
+::wuirky::quirky
+::provite::provide
+::konwing::knowing
+::apartmetn::apartment
+::experince::experience
+::swithc::switch
+::twetny::twenty
+::wateramrk::watermark
+::todl::told
+::wartmh::warmth
+::matres::mattress
+::pratcital::practical
+::wold::world
+::fiverr::Fiverr
+::oce::once
+::exxageration::exaggeration
 ::Hejres::Here's
-::quiick::quick
-::earlyier::earlier
-::aabout::about
+::inot::into
+::dtime::time
+::ahelping::a helping
+::tomorow::tomorrow
+::waining::waning
+::inevitiable::inevitable
+::dindtn::didn't
+::magentfishing::magnetfishing
+::whiole::while
+::falen::fallen
+::hounted::haunted
+::owrdl::world
+::falsk::flask
+::woudlnt::wouldn't
+::preyy::pretty
+::hsot::host
+::fuking::fucking
+::meel::meal
+::loks::looks
+::multitool::multi tool
+::hapy::happy
+::probide::provide
+::whehter::whether
+::helathy::healthy
+::mallorca::Mallorca
+::skillsets::skill sets
+::wuickly::quickly
+::scaray::scary
+::buisiness::business
+::somethine::something
+::ewxample::example
+::genreally::generally
+::notebokk::notebook
+::affetcs::affects
+::stil::still
+::I#ll::I'll
+::alwas::always
+::shortliived::short-lived
+::stabilitze::stabilize
+::actaully::actually
+::bcuks::bucks
+::exsiting::existing
+::THis::this
+::insallation::installation
+::aand::and
+::activng::acting
+::cousts::costs
+::homeage::homepage
+::rgardles::regardless
+::wordls::worlds
+::easiyl::easily
+::replacememtns::replacements
+::goint::going
+::hafl::half
+::cretures::creatures
+::thurst::thrust
+::ty::thank you
+::rpess::press
 ::heres::here is
-::proff::proof
+::stuzpid::stupid
+::hunbt::hunt
+::anad::and
+::onticing::noticing
+::immensily::immensely
+::acces::access
+::amazon::Amazon
+::deleteing::deleting
+::environs::invironments
+::texas::Texas
+::constnatnly::constantly
+::impelemnt::implement
+::progreaming::programming
+::wthter::whether
+::caer::care
+::lsightly::slightly
+::eror::error
+::oens::ones
+::mysoginist::misogynist
+::undertatking::undertaking
+::peoplk::people
+::shoto::shoot
+::algoryhtm::algorythm
+::grined::grinned
+::amybe::maybe
+::whhere::where
+::pratcie::practice
+::moemnts::moments
+::lemongrass::lemon grass
+::corection::correction
+::wondows::windows
+::bowth::both
+::reclusives::recluses
+::s cript::script
+::porjects::projects
+::thougth::thought
+::Ihope::I hope
+::tomoreo::tomorrow
+::origianlly::originally
+::biult::built
+::naem::name
+::haappens::happens
+::geta::get a
+::unles::unless
+::inwented::invented
+::eral::real
+::hoep::hope
+::placmeent::placement
+::arrogatn::arrogant
+::prorbbaly::probably
+::dedided::decided
+::appearnce::appearance
+::fngers::fingers
+::manby::many
+::partiuclar::particular
+::realxing::relaxing
+::tow rite::to write
+::constnaly::constantly
+::mmy::my
+::createa::create a
+::yo9urself::yourself
+::outlandsih::outlandish
+::sedning::sending
+::maintenacne::maintenance
+::diffrernt::different
+::kindom::kingdom
+::ncie::nice
+::befor::before
+::pls::please
+::defintieyl::definitely
+::expereincing::experiencing
+::fiar::fair
+::foward::forward
+::beocme::become
+::accidentially::accidentally
+::tow ork::to work
+::actie::active
+::anyoing::annoying
 ::randdom::random
-::coment::comment
-::screnshot::screenshot
-::thumbnaisl::thumbnails
+::aren#t::aren't
+::afterwards::afterward
+::balgame::ballgame
+::mange::manage
+::cancelling::canceling
+::Imade::I made
+::maintencance::maintenance
+::weirldy::weirdly
+::compousre::composure
+::Lt.::Lieutenant
+::configuire::configure
+::somewhhere::somewhere
+::renpy::RenPy
+::particularyl::particularly
+::aroudn::around
+::flacid::flaccid
+::curios::curious
+::suprassed::surpassed
+::deseases::diseases
+::proiblem::problem
+::witout::without
+::campaing::campaign
+::reihgt::right
+::tonge::tongue
+::rememeber::remember
+::wihtin::within
+::aboused::abused
+::amlost::almost
+::companeis::companies
+::frnakly::frankly
+::msaller::smaller
+::menaing::meaning
+::lucury::luxury
+::significatn::significant
+::diging::digging
+::friedn::friend
+::workahoic::workaholic
+::strets::streets
+::sometims::sometimes
+::prefered::preferred
+::ari::air
+::frinds::friends
+::aksing::asking
+::folling::following
+::cornder::corner
+::toook::took
+::ecample::example
+::fance::fancy
+::asshoel::asshole
+::youc an::you can
+::jost::just
+::consle::console
+::theose::those
+::english::English
+::affiliateion::affiliation
+::event hen::even then
+::probabbly::probably
+::structurizing::structuring
+::fi::if
+::rhethoric::rhetoric
+::wehne::when
+::powerhorse::power horse
+::backsapce::backspace
+::monye::money
+::bundh::bunch
+::contnet::content
+::publich::publish
+::strucutre::structure
+::absolutly::absolutely
+::worte::wrote
+::developemnt::development
+::falmes::flames
+::constand::constant
+::exxagerated::exaggerated
+::importatntly::importantly
+::withuto::without
+::orgrasm::orgasm
+::ocmpared::compared
+::valueing::valuing
+::corret::correct
+::int hat::in that
+::nutral::neutral
+::spain::Spain
+::illegitame::illegitimate
+::yorus::yours
+::irresponisbile::irresponsible
+::someonbe::someone
+::boguht::bought
+::asume::assume
+::oocured::occurred
+::realxed::relaxed
+::presing::pressing
+::neglicence::negligence
+::abook::a book
+::densitiy::density
+::cocuple::couple
 ::manaully::manually
-::manaul::manual
-::mentinoed::mentioned
-::projcts::projects
-::baords::boards
-::amuch::a much
-::eaiser::easier
-::Netlfiy::Netlify
-::promtoe::promote
-::apaft::apart
-::frrom::from
-::froomm::from
-::weith::with
-::inofrmation::information
-::everyhitng::everything
-::youi::you
-::monitoriing::monitoring
-::whehther::whether
+::tyme::time
+::virutally::virtually
+::biut::bit
+::suti::suit
+::hitn::hint
+::psots::posts
+::erality::reality
+::toegehter::together
+::learna lot::learn a lot
+::databanse::database
+::beca::because
+::eery::every
+::hzere::here
+::comfotable::comfortable
+::osmeone::someone
+::coyping::copying
+::freeodm::freedom
+::ona::on a
+::oucld::could
+::juzst::just
+::iditos::idiots
+::worhtless::worthless
+::hipe::hope
+::intermittened::intermittent
+::substitue::substitute
+::elimated::eliminated
+::rooom::room
+::coupel::couple
+::peny::penny
+::afiliate::affiliate
+::prrof::proof
+::self publisher::self-publisher
+::efect::effect
+::efffort::effort
+::caant::can't
+::rasing::raising
+::unfrienldy::unfriendly
+::bewaer::beware
+::stoping::stopping
+::firneds::friends
+::swrod::sword
+::assortmetn::assortment
+::wolrd::world
 ::chocolote::chocolate
-::oculdnt::couldn't
-::hjow::how
-::wtihout::without
-::improtatn::important
-::muxh::much
-::conenctions::connections
-::databses::databases
-::conenct::connect
-::cocurse::course
-::stakc::stack
-::couse::course
-::accoounts::accounts
-::acouple::a couple
-::stciker::sticker
-::travvel::travel
+::constnat::constant
+::incoherrent::incoherent
+::clok::clock
+::vscode::VS Code
+::mening::meaning
+::abbreviateions::abbreviations
+::Expaning::Expanding
+::manic::maniac
+::wriing::writing
+::rhtough::through
+::statr::start
+::bset::best
+::busyiest::busiest
+::realiteis::realities
+::sydney::Sydney
+::consiered::considered
+::cannot::can not
+::lesons::lessons
+::deactiavte::deactivate
+::beter::better
+::sinlge::single
+::moneitzed::monetized
+::handt::hadn't
+::birght::bright
+::ineficcient::inefficient
+::somewho::somehow
+::canuse::can use
+::appropiately::appropriately
+::piont::point
+::betewen::between
+::cabable::capable
+::corrobated::corroborated
+::sturggle::struggle
+::doctors apointment::doctor's appointment
+::wuarter::quarter
+::hse::she
+::t aht::that
+::constatnly::constantly
+::protext::protect
+::stnading::standing
+::durng::during
+::reaonsblae::reasonable
+::healhty::healthy
+::vaction::vacation
+::explaingin::explaining
+::imrpove::improve
+::imageine::imagine
+::amaziang::amazing
+::sahre::share
+::kisss::kiss
+::billard::billiard
+::brainstomr::brainstorm
+::foucs::focus
+::hve::have
+::topcs::topics
+::dep::deep
+::qwuikcly::quickly
+::volunterr::volunteer
+::enfuriating::infuriating
+::lawys::always
+::american::American
+::yourre::you're
+::eveyone::everyone
+::underttok::undertook
+::snet::sent
+::platforum::platform
+::actioin::action
+::yyour::your
+::owords::words
+::begane::began
+::tehn::then
+::repition::repetition
+::anywehere::anywhere
+::nect::next
+::infact::in fact
+::compay::company
+::Mutliple::Multiple
+::ffound::found
+::searhc::search
+::hiinted::hinted
+::atosphere::atmosphere
+::distractiosn::distractions
+::importatnyl::importantly
+::thoguht::thought
+::thist::this
+::magazinies::magazines
+::concience::conscience
+::doinga::doing a
+::its::it's
+::dashbaords::dashboards
+::aroiund::around
+::envionment::environment
+::billards::billiards
+::buillt::built
+::viedeos::videos
+::aabout::about
+::argueing::arguing
+::profesionaly::professionally
+::produtivity::productivity
+::conveninet::convenient
+::mechancail::mechanical
+::meatime::meantime
+::pics::pictures
+::somehwere::somewhere
+::transprot::transport
+::fb::Facebook
+::havppy::happy
+::watned::wanted
+::pwer::power
+::rabit::rabbit
+::tbales::tables
+::pullme::pull me
+::apllying::applying
+::wrods::words
+::eno0ug::enough
+::se::see
+::identfy::identify
+::excersise::exercise
+::thrhough::through
+::bateries::batteries
+::chainging::changing
+::somethting::something
+::assing::assign
+::wsa::was
+::afordabel::affordable
+::jim::Jim
+::goten::gotten
+::cahnel::channel
+::presenation::presentation
+::becmae::became
+::authenticatiosn::authentications
+::eiather::either
+::amdin::admin
+::throguh::through
+::Netlfiy::Netlify
+::valuze::value
+::someoene::someone
+::Bascially::Basically
+::realze::realize
+::geets::gets
+::disappiears::disappears
+::gonan::gonna
+::bucnh::bunch
+::inadvertly::inadvertently
+::lithuania::Lithuania
+::stopid::stupid
+::champane::champagne
+::wehther::whether
+::noticedthe::noticed the
+::progres::progress
+::huntres::huntress
+::sceptical::skeptical
+::thrwon::thrown
+::winodw::window
+::oftent imes::often time
+::fav::favorite
+::givent he::given the
+::rememebered::remembered
+::wordpress::Wordpress
+::exlusion::exclusion
+::conrol::control
+::aboiut::about
+::furninutre::furniture
+::slep::sleep
+::flor::floor
+::nintey::ninety
+::mutli::multi
+::stuf::stuff
+::traying::trying
+::dupliation::duplication
+::multiplle::multiple
+::powertools::power tools
+::wrold::world
+::moave::move
+::dailight::daylight
+::attemtp::attempt
+::bodiyl::bodily
+::diferetnce::difference
+::mechancial::mechanical
+::tuiton::tuition
+::wheer::where
+::everytone::everyone
+::automaticaly::automatically
+::peole::people
+::laprotp::laptop
+::positivly::positively
+::actievly::actively
+::youtueb::YouTube
+::wehter::whether
+::anway::anyway
+::chari::chair
+::precisiion::precision
+::newletter::newsletter
+::nknow::know
+::offseeting::offsetting
+::atively::actively
+::routinley::routinely
+::youor::your
+::yoruself::yourself
+::laebl::label
+::meagre::meager
+::triying::trying
+::aparmtne::apartment
+::oild::old
+::somteims::sometimes
+::subtelty::subtlety
+::stsays::stays
+::secual::sexual
+::screns::screens
+::Jessidca::Jessica
+::shuldnt::shouldn't
+::woth::worth
+::extremee::extreme
+::croisants::croissants
+::youd::you would
+::itll::it'll
+::bleived::believed
+::youll::you'll
+::furnutre::furniture
+::proposenew::propose new
+::powerbank::power bank
+::mysself::myself
+::infront::in front
+::havig::having
+::fife::five
+::yoursefl::yourself
+::cuting::cutting
+::welll::we'll
+::devs::developers
+::dowsn::down
+::whats::what's
+::eqully::equally
+::throught::through
+::wrothwhile::worthwhile
+::becoime::become
+::patreon::Patreon
+::hgave::have
+::expe::experience
+::anthing::anything
+::lester::Lester
+::developmsnes::developments
+::heppy::happy
+::appopriate::appropriate
+::alwys::always
+::prgoramming::programming
+::motnh::month
+::yesterdays::yesterday's
+::prjoects::projects
+::tutoriasl::tutorials
+::stoart::start
+::coudlnt::couldn't
+::pletny::plenty
+::lucnh::lunch
+::biger::bigger
+::paychek::paycheck
+::expenisve::expensive
+::eveen::even
+::montsh::months
+::beenfical::beneficial
+::wouild::would
+::soemhow::somehow
+::everonye::everyone
+::continute::continue
+::alot::a lot
+::riase::raise
+::london::London
+::armorered::armored
+::lateyl::lately
+::propbably::probably
+::everyhting::everything
+::donw::down
+::christmas::Christmas
+::wuality::quality
 ::appraochable::approachable
-::rnadom::random
-::knoing::knowing
-::isnide::inside
+::mechaincal::mechanical
+::tha tnight::that night
+::aboslutly::absolutely
+::wbesite::website
+::enjoyabel::enjoyable
+::customzie::customize
+::friedns::friends
+::headshakes::head-shakes
+::wueue::queue
+::endpoitn::endpoint
+::bok::book
+::stors::stores
+::vanisches::vanishes
+::cabale::capable
+::laura::Laura
+::middel::middle
+::walpaper::wallpaper
+::kennedy::Kennedy
+::certainyl::certainly
+::nicet::nicest
+::tohre::other
+::mac::Mac
+::contatct::contact
+::outwhat::out what
+::compoentnes::components
+::exps::experiences
+::crwoded::crowded
+::chernobyl::Chernobyl
+::enouzgh::enough
+::msitake::mistake
+::liminted::limited
+::iternet::internet
+::pruposes::purposes
+::mrongin::morning
+::hwere::where
+::rbougth::brought
+::quickily::quickly
+::tok::took
+::exes::eyes
+::TOday::today
+::imaginery::imaginary
+::engaing::engaging
+::puprpose::purpose
+::atht::that
+::endand::end and
+::aether::ether
+::nobodys::nobody's
+::produtictiy::productivity
+::somethignt::something
+::jekyll::Jekyll
+::les::less
+::freedome::freedom
+::worthwile::worthwhile
+::opportuniti9es::opportunities
+::everone::everyone
+::coretction::corrections
+::operarting::operating
+::pelase::please
+::mking::making
+::presure::pressure
+::stragner::stranger
+::havent::haven't
+::reserch::research
+::twoards::towards
+::mesages::messages
+::wil::will
+::arouond::around
+::teacerh::teacher
+::esy::easy
+::remmember::remember
+::stuick::stuck
+::proabbyl::probably
+::covno::conversation
+::wrost::worst
+::laoptop::laptop
+::europe::Europe
+::foregoiong::foregoing
+::esp::especially
+::benficial::beneficial
+::laptp::laptop
+::deterioated::deteriorated
+::convos::conversations
+::togetehr::together
+::holt::hold
+::carerrs::careers
+::wrtingÂ ::writing
+::celars::clears
+::curiculum::curriculum
+::poist::post
+::claled::called
+::genertor::generator
+::endevor::endeavour
+::relase::release
+::accoridng::according
+::clsoing::closing
+::amoment::a moment
+::autn::aunt
+::sociale::sociable
+::fari::fair
+::slowyl::slowly
+::ceratin::certain
+::ocne::once
+::outisde::outside
+::monbth::month
+::functionaily::functionality
+::cocurse::course
+::accouhnt::account
+::andmind::and mind
+::abbr::abbreviation
+::puchases::purchases
+::transistioned::transitioned
+::comparion::comparison
+::kithcen::kitchen
+::toally::totally
+::recordning::recording
+::favs::favorites
+::wquickly::quickly
+::exisitn::existing
+::speek::speak
+::enouh::enough
+::sovle::solve
+::foour::four
+::liife::life
+::benefti::benefit
+::iif::if
+::virtualy::virtually
+::btw::by the way
+::termn::term
+::poice::police
+::adnventure::adventure
+::uploaing::uploading
+::obsolte::obsolote
+::conflciting::conflicting
+::Develoipment::Development
+::mnore::more
+::wihtotu::without
+::ina::in a
+::ac couple::a couple
+::disgrunteled::disgruntled
+::meldoic::melodic
+::furniutre::furniture
+::espeically::especially
+::anyting::anything
+::shrot::short
+::jumpt o::jump to
+::puposes::purposes
+::benfeits::benefits
+::exclusing::excluding
+::anythig::anything
+::suspicioun::suspicion
+::soner::sooner
+::undepaid::underpaid
+::reight::right
+::maried::married
+::subscribres::subscribers
+::spreadhseet::spreadsheet
+::anvigation::navigation
+::thirve::thrive
+::backgroudn::background
+::maintinating::maintaining
+::defintions::definitions
+::probabyl::probably
+::useles::useless
+::antoher::another
+::soemohw::somehow
+::beauy::beauty
+::maany::many
+::alptop::laptop
+::eslewhere::elsewhere
+::adpat::adapt
+::sahres::shares
+::increasibly::increasingly
+::amyn::many
+::cabel::cable
+::brekaing::breaking
+::palyers::players
+::infaltion::inflation
+::dialy::daily
+::espe::especially
+::beatuifl::beautiful
+::annd::and
+::unpredicatble::unpredictable
+::applky::apply
+::an d::and
+::desperatley::desperately
+::facotry::factory
+::sem::seem
+::fruther::further
+::slgihtly::slightly
+::copiled::compiled
+::seeling::selling
+::stor y::story
+::fixiung::fixing
+::earlyier::earlier
+::developement::development
+::bulshit::bullshit
+::pinnning::pinning
+::relly::really
+::differente::difference
+::thinging::thinking
+::actal::actual
+::useufu::useful
+::technologial::technological
+::qhole::whole
+::theree::there
+::esier::easier
+::masive::massive
+::publihsing::publishing
+::tbh::to be honest
+::iun::in
+::watchedthe::watched the
+::funa nd::fun and
+::aproach::approach
+::inofrmation::information
+::somethgin::something
+::pictrue::picture
+::metings::meetings
+::sacrifies::sacrifices
+::wating::waiting
+::condescening::condescending
+::wortht heÂ ::worth the
+::superflous::superfluous
+::smashwords::Smashwords
+::goood::good
+::surpsingly::surprisingly
+::youhad::you had
+::numer::number
+::conintue::continue
+::realiable::reliable
+::tiime::time
+::rahter::rather
+::potenitally::potentially
+::like dthis::liked this
+::aspriing::aspiring
+::usecases::use-cases
+::maek::make
+::policitcal::political
+::techer::teacher
+::travvel::travel
+::resonable::reasonable
+::enganged::engaged
+::wel::well
+::cahnges::changes
+::Cleint::Client
+::indiviual::individual
+::relaize::realize
+::yo need::you need
+::broswer::browser
+::intersting::interesting
+::hosintg::hosting
+::demeed::deemed
+::afternon::afternoon
+::gneeral::general
+::familiy::family
+::bunhc::bunch
+::ovbly::obviously
+::cheaping::cheapening
+::vehilce::vehicle
+::beofre::before
+::cold war::Cold War
+::tba::to be announced
+::unlimeted::unlimited
+::wholething::whole thing
+::german::German
+::exectuable::executable
+::fishined::finished
+::figners::fingers
+::suced::succeed
+::biterness::bitterness
+::activley::actively
+::tpyed::typed
+::universially::universally
+::decidedyl::decidedly
+::breadcrump::breadcrumb
+::aquired::acquired
+::instnat::instant
+::doesnst::doesn't
+::standpoitn::standpoint
+::thousnad::thousand
+::foregt::forget
+::ocured::occurred
+::tomoroow::tomorrow
+::priorty::priority
+::nothig::nothing
+::contatined::contained
+::ahvent::havent
+::itll::it will
+::whicked::wicked
+::hardrive::hard drive
+::sviweling::swiveling
+::Julai::Julia
+::frinedly::friendly
+::mots::most
+::stafed::staffed
+::cruicalÂ ::crucial
+::nthen::then
+::databese::database
+::twelvth::twelfth
+::eficient::efficient
+::necessitiy::necessity
+::earnigs::earnings
+::meting::meeting
+::repsonse::response
+::smalelr::smaller
+::rmeember::remember
+::immunue::immune
+::tittled::titled
+::wrokgin::working
+::powerufl::powerful
+::qho::who
+::intermittend::intermittent
+::posibly::possibly
+::heare::hear
+::moer::more
+::poour::pour
+::litlte::little
+::motniro::monitor
+::wouldkill::would kill
+::ebtter::better
+::appearnces::appearances
+::remvoed::removed
+::combiantion::combination
+::metnal::mental
+::contenet::content
+::alreay::already
+::bec::because
+::wuite::quite
+::unuasble::unusable
+::ahaving::having
+::peopelo::people
+::oiut::out
+::checkboxes::check boxes
+::commetn::comment
+::quiick::quick
+::fastr::faster
+::hindred::hindered
+::myslf::myself
+::felel::feel
+::breaht::breath
+::flashight::flashlight
+::sbt::scene black {#}todo
+::cruciall::crucial
+::whished::wished
+::uncerned::unconcerned
+::theings::things
+::Ramyond::Raymond
+::sueful::useful
+::ridiculuosy::ridiculously
+::ffar::far
+::onthis::on this
+::doig::doing
+::backend::back-end
+::texh::tech
+::pwful::powerful
+::conmbination::combination
+::slihgtest::slightest
+::paralelization::parallelization
+::sjut::just
+::palceholder::placeholder
+::defi::definitely
+::rewuests::requests
+::peple::people
+::wastn::wasn't
+::mien::mine
+::shoulnt::shouldn't
+::learend::learned
+::roleplaying::role-playing
+::morngin::morning
+::queuue::queue
+::disecting::dissecting
+::withotuo::without
+::posible::possible
+::thining::thinking
+::hjow::how
+::boredeom::boredom
+::thgouth::thought
+::alte::late
+::oinly::only
+::havein::have in
+::mysogynistic::misogynistic
+::pyhton::python
+::stakc::stack
+::thingk::think
+::leavse::leaves
+::frequenylt::frequently
+::noen::none
+::oldschool::old-school
+::breahts::breaths
+::effrot::effort
+::stillhere::still here
+::rightnoe::right now
+::opinon::opinion
+::consitent::consistent
+::broek::broke
+::recodring::recording
+::compnay::company
+::withcer::witcher
+::highlihgt::highlight
+::resutls::results
+::butmany::but many
+::callled::called
+::dthem::them
+::ned::need
+::foresty::forestry
+::debuging::debugging
+::hapeen::happen
+::easyier::easier
+::itss::its
+::finsh::finish
+::gtting::getting
+::pregnatn::pregnant
+::folow::follow
+::tema::team
+::scepticism::skepticism
+::fator::factor
+::anyoine::anyone
+::disassmeble::disassemble
+::producivty::productivity
+::Fouzrth::fourth
+::don#t::don't
+::wnet::went
+::baggagge::baggage
+::behaviour::behavior
+::thtey::they
+::jus tbe::just be
+::mentioing::mentioning
+::environemnt::environment
+::increasinly::increasingly
+::icant::I can't
+::aynthing::anything
+::thouroughly::thoroughly
+::producitve::productive
+::broed::bored
+::puls::pulls
+::fresht hough::fresh though
+::tomorwo::tomorrow
+::aceptable::acceptable
+::funmaking::fun making
+::seeemd::seemed
+::lifestreams::live streams
+::experiemt::experiment
+::desier::desire
+::twiter::twitter
+::attemtping::attempting
+::alittle::a little
+::tohse::those
+::failible::fallible
+::teim::time
+::rbing::bring
+::acess::access
+::eventing::evening
+::enoug::enough
+::ultiamtely::ultimately
+::ridiculoulsy::ridiculously
+::persepective::perspective
+::eitehr::either
+::understadn::understand
+::amateuer::amateur
+::temas::teams
+::i#m::I'm
+::sadi::said
+::qutie::quite
+::tpying::typing
+::affordabel::affordable
+::muzch::much
+::hopeing::hoping
+::tojust::to just
+::windchimes::wind chimes
+::storylines::story lines
+::environ::environment
+::hteres::there's
+::varioius::various
+::seting::setting
+::aforded::afforded
+::hanf::hang
+::tolls::tools
+::valuebl::valuable
+::eyse::eyes
+::planingÂ ::planning
+::confiure::configure
+::eos::each other's
+::prety::pretty
+::afte rthem::after them
+::ofpeople::of people
+::configuarion::configuration
+::laughted::laughed
+::improtant::important
+::avice::advice
+::tomanaging::to managing
+::wrinting::writing
+::worreis::worries
+::grandfahter::grandfather
+::formss::forms
+::workting::working
+::awesoem::awsome
+::flawsbut::flaws but
+::componetnes::components
+::gettting::getting
+::maneable::manageable
+::netflix::Netflix
+::midn::mind
+::addiciting::addicting
+::rewuest::request
+::itme::time
+::walzed::waltzed
+::doesn#t::doesn't
+::decenty::decently
+::flors::floors
+::eidting::editing
+::intoa::into a
+::YOu::you
+::frankyl::frankly
+::straiing::straining
+::unerstand::understand
+::somtehing::something
+::chuckeld::chuckled
+::loinger::longer
+::builind::building
+::anyboy::anybody
+::won#t::won't
+::netered::entered
+::tjob::job
+::oldtimer::old timer
+::gigle::giggle
+::differentyl::differently
+::dolar::dollar
+::lats::last
+::int his::in this
+::difrent::different
+::migiht::might
+::feautreu::feature
+::promopt::prompt
+::co9uld::could
+::outlayed::outlaid
+::tuesdays::Tuesdays
+::retweetet::retweeted
+::actuyll::actually
+::evetything::everything
+::hteose::those
+::possibel::possible
+::mroning::morning
+::shoing::showing
+::monht::month
+::handufl::handful
+::cringeworthy::cringe-worthy
+::wihtout::without
+::thights::thighs
+::shoews::shows
+::chacnes::chances
+::brazingly::brazenly
+::gogle::google
+::asap::as soon as possible
+::proff::proof
+::sceen::scene
+::rpactical::practical
+::blodd::blood
+::act5ually::actually
+::miror::mirror
+::eno0ugh::enough
+::realtiy::reality
+::whi9ch::which
+::loit::lot
+::starrt::start
+::qhy::why
+::ahaid::ahead
+::morepowerful::more powerful
+::experiement::experiment
+::horu::hour
+::dindt::didn't
+::moemnt::moment
+::nowadys::nowadays
+::shotting::shooting
+::actioanble::actionable
+::maxium::maximum
+::desktoip::desktop
+::surprsie::surprise
+::glamerous::glamorous
+::youro::your
+::pseak::speak
+::kepp::keep
+::isses::issues
+::nowheere::nowhere
+::improtatn::important
+::youtube::YouTube
+::btoh::both
+::everony::everyone
+::onec::once
+::accoutn::account
+::enouhg::enough
+::leveerage::leverage
+::anythzing::anything
+::analkytics::analytics
+::everywone::everyone
+::complicatoisn::complications
+::imput::input
+::senteces::sentences
+::proabbaly::probably
+::sturgels::struggles
+::smothly::smoothly
+::worht::worth
+::jekyl::Jekyll
+::uterly::utterly
+::spritis::spirits
+::conttnet::content
+::accomplishmetn::accomplishment
+::commonyl::commonly
+::intead::instead
+::bluetooth::Bluetooth
+::producitvty::productivity
+::aretn::aren't
+::padi::paid
+::nothc::notch
+::rgular::regular
+::indiviudla::individual
+::stopeed::stopped
+::finsihsed::finished
+::lifteim::lifetime
+::couhc::couch
+::presonally::personally
+::liike::like
+::obv::obvious
+::unhealhty::unhealthy
+::smileing::smiling
+::intetnion::intention
+::honst::honest
+::reddit::Reddit
+::maybw::maybe
+::ontop::on top
+::justics::justice
+::publicatoin::publication
+::classs::class
+::begaviour::behaviour
+::thema ll::them all
+::applyiing::applying
+::hguge::huge
+::noenÂ ::none
+::poitner::pointer
+::soemthing::something
+::simpley::simply
+::understant::understand
+::earlly::early
+::Mediium::Medium
+::notificiation::notification
+::hobies::hobbies
+::mira::Mira
+::COding::coding
+::enron::environment
+::producitivy::productivity
+::erorr::error
+::horus::hours
+::wite::write
+::awaare::aware
+::outleigh::outlay
+::turnig::turning
+::intenrt::internet
+::drwoing::drowning
+::enviorn::environment
+::whos::who's
+::spotify::Spotify
+::antoehr::another
+::possbile::possible
+::coem::come
+::abot::about
+::realte::relate
+::survie::survive
+::freqzuently::frequently
+::brianstorming::brainstorming
+::powerered::powered
+::guinness::Guinness
+::rgard::regard
+::simliar::similar
+::correctiosn::corrections
+::Usualy::Usually
+::campter::camper
+::annyoingly::annoyingly
+::insanley::insanely
+::drawiing::drawing
+::latsing::lasting
+::soemeone::someone
+::repsonsible::responsible
+::embelleshed::embellished
+::skil::skill
+::bloging::blogging
+::tuaght::taught
+::theemes::themes
+::interviewd::interviewed
+::rethoric::rhetoric
+::fashionn::fashion
+::wrtie::write
+::conenction::connection
+::fromseeing::from seeing
+::twnty::twenty
+::defintiely::definitely
+::genereal::general
+::mechnacil::mechanical
+::pullups::pull-ups
+::accomonate::accommodate
+::usre::sure
+::tha t::that
+::tutoiral::tutorial
+::toatly::totally
 ::yo9u::you
+::soemthng::something
+::finidng::finding
+::aout::about
+::sldie::slide
+::tose::those
+::bc::because
+::russia::Russia
+::constrautnion::construction
+::perfet::perfect
+::ourrselves::ourselves
+::youa re::you are
+::apparentyl::apparently
+::wrtiing::writing
+::mvoing::moving
+::tiwce::twice
+::gte::get
+::actaulyl::actually
+::picutre::picture
+::wo.::without
+::ahving::having
+::amoutn::amount
+::extrmee::extreme
+::fowrd::forward
+::aolredy::already
+::finsihed::finished
+::mindles::mindless
+::honeslty::honestly
+::shrotly::shortly
+::serached::searched
+::sharlatans::charlatans
+::questionale::questionable
+::publihsingÂ ::publishing
+::arragement::arrangement
+::amuch::a much
+::movments::movements
+::prowd::proud
+::sometghin::something
+::artifact::artefact
+::nohting::nothing
+::isprobably::is probably
+::interesteing::interesting
+::compeet::compete
+::brainstomring::brainstorming
+::investiagtion::investigation
+::muh::much
+::realizty::reality
+::isues::issues
+::probelmes::problems
+::isnide::inside
+::wordl::world
+::luxurius::luxurious
+::thiss::this
+::bootom::bottom
+::schol::school
+::that#s::that's
+::comission::commission
+::pokcet::pocket
+::buaerocracy::bureaucracy
+::typer::typist
+::scrivener::Scrivener
+::eithe rof::either of
+::retuning::returning
+::abanond::abandon
+::constntaly::constantly
+::conisderation::consideration
+::ocurse::course
+::hoenst::honest
+::ful::full
+::stanind::standing
+::niether::neither
+::publihsed::published
+::crrek::creek
+::beenfit::benefit
+::lusyury::luxury
+::happned::happened
+::stackoverflwo::stackoverflow
+::fe::for example
+::suddnely::suddenly
+::setings::settings
+::COde::code
+::oaky::okay
+::mmove::move
+::functiont hat::that
+::montor::monitor
+::googleing::googling
+::drak::dark
+::jduging::judging
+::tocuh::touch
+::proiftable::profitable
+::swalloed::swallowed
+::ofer::offer
+::yeling::yelling
+::chalenges::challenges
+::youhavent::you haven't
+::weith::with
+::hobyist::hobbyist
+::wlaking::walking
+::publsihing::publishing
+::anytihgn::anything
+::.ece::.exe
+::convo::conversation
+::juts::just
+::certianly::certainly
+::andt hey::and they
+::omney::money
+::hoizon::horizon
+::youhave::you have
+::mainyl::mainly
+::lookedd::looked
+::contentn::content
+::monitoriing::monitoring
+::adaults::adults
+::motly::mostly
+::Atmosphre::atmosphere
+::associiated::associated
+::novemeber::November
+::publsihed::published
+::repariing::repairing
+::beatuiful::beautiful
+::difrence::difference
+::milliions::millions
+::ordinance::ordnance
+::envrion::environment
+::writng::writing
+::mometns::moments
+::VS COde::vs code
+::gratned::granted
+::expermimtns::experiments
+::differetn::different
+::singel::single
+::skiy::sky
+::discoveres::discovers
+::visititors::visitors
+::ntoice::notice
+::toherwise::otherwise
+::thouhgt::thought
+::vs code::VS Code
+::coherrent::coherent
+::calculater::calculator
+::protion::portion
+::combied::combined
+::yo9ur::your
+::necessarly::necessarily
+::srtong::strong
+::Frellance::Freelance
+::seemd::seemed
+::vids::videos
+::majory::majority
+::markdwon::Markdown
+::beenfits::benefits
+::differtn::different
+::compeltely::completely
+::inces::inches
+::plying::playing
+::foir::for
+::reaons::reasons
+::denmark::Denmark
+::interupting::interrupting
+::fredom::freedom
+::fromt aht::from that
+::smokey::smoky
+::taks::takes
+::disappointemnt::disappointment
+::hopüe::hope
+::acitve::active
+::begrudignly::begrudgingly
+::howmany::how many
+::weeked::weekend
+::combo::combination
+::openting::opening
+::thingst hat::things that
+::iether::either
+::sllug::slug
+::hudnred::hundred
+::pertty::pretty
+::ahveing::having
+::aricle::article
+::aveneu::avenue
+::tzhe::the
+::proudcitvy::productivity
+::fidning::finding
+::planeed::planned
+::trainyard::train yard
+::stabel::stable
+::ive::I've
+::hnadful::handful
+::smeile::smile
+::tino::into
+::experinemnting::experimenting
+::reder::reader
+::reaserch::research
+::psoting::posting
+::expcetion::exception
+::thhere::there
+::pruchase::purchase
+::bukcs::bucks
+::anice::a nice
+::illl::I'll
+::reasable::readable
+::abouit::about
+::jst::just
+::usper::super
+::aford::afford
+::wroth::worth
+::inisde::inside
+::timeof::time
+::delte::delete
+::worhtwile::worthwhile
+::forteen::fourteen
+::furnitre::furniture
+::publc::public
+::oir::or
+::woud::would
+::telliong::telling
+::benfit::benefit
+::sek::seek
+::bullslhitting::bullshitting
+::beneift::benefit
+::wiritngÂ ::writing
+::cafeine::caffeine
+::wouldhave::would have
+::compileer::compiler
+::betwwen::between
+::psent::spent
+::regualr::regular
+::tood::todo
+::worpdress::wordpress
+::wiat::wait
+::literlay::literally
+::setnences::sentences
+::persoanlly::personally
+::strugles::struggles
+::skilsets::skill sets
+::monring::morning
+::paoin::pain
+::scritps::scripts
+::tabel::table
+::transering::transferring
+::expet::expect
+::keybaord::keyboard
+::scrp::scrap
+::incoem::income
+::Hows::How's
+::expeirce::experience
+::retiremnt::retirement
+::altogeher::altogether
+::bushfires::bush fires
+::marvelled::marveled
+::warior::warrior
+::depp::deep
+::froim::from
+::tumblr::Tumblr
+::diference::difference
+::uplaoded::uploaded
+::surprsiinly::surprisingly
+::suspicous::suspicious
+::wheenver::whenever
+::wrting::writing
+::productivtiy::productivity
+::soruce::source
+::ccould::could
+::listenting::listening
+::squadmate::squad mate
+::tomoreow::tomorrow
+::oppoiste::opposite
+::sesion::session
+::rnage::range
+::bluetoth::Bluetooth
+::badn::band
+::beind::behind
+::benfits::benefits
+::ffully::fully
+::toal::total
+::microsoft::Microsoft
+::milliion::million
+::finsihsing::finishing
+::lillte::little
+::quickyl::quickly
+::propell::propel
+::impactul::impactful
+::no0t::not
+::rediculuous::ridiculous
+::wihth::with
+::moentize::monetize
+::thourhgout::throughout
+::sudeenly::suddenly
+::willa lso::will also
+::mistyped::miss-typed
+::questions::questions
+::presss::press
+::choise::choice
+::metting::meeting
+::disapointed::disappointed
+::papr::paper
+::monetray::monetary
+::conclulsion::conclusion
+::lanaguae::language
+::imo::in my opinion
+::otherise::otherwise
+::wihch::which
+::fifnishing::finishing
+::nihce::niche
+::bigged::bugged
+::deskotp::desktop
+::thouhgts::thoughts
+::simplictiy::simplicity
+::eithr::either
+::returniung::returning
+::osme::some
+::lessosn::lessons
+::producitviy::productivity
+::anoyne::anyone
+::enhaning::enhancing
+::stragiht::straight
+::librarby::library
+::insde::inside
+::couse::course
+::normaly::normally
+::moring::morning
+::as wella s::as well as
+::iwhtout::without
+::refactdoring::refactoring
+::british::British
+::exsits::exists
+::prgramming::programming
+::encoutner::encounter
+::isue::issue
+::thakns::thanks
+::germany::Germany
+::harldy::hardly
+::exaclty::exactly
+::envionemnt::environment
+::murmansk::Murmansk
+::minur::minor
+::hadnns::hands
+::covre::cover
+::enojy::enjoy
+::paygrade::pay grade
+::whenver::whenever
+::wtihout::without
+::questionaire::questionaire
+::pronhub::pornhub
+::apalled::appalled
+::surpirsing::surprising
+::weekness::weakness
+::openeing::opening
+::cmaper::camper
+::ariving::arriving
+::tahts::that's
+::pityful::pitiful
+::algo::algorithm
+::ocunt::count
+::amazin::amazing
+::ture::true
+::fowrda::forward
+::tols::tools
+::emplyed::employed
+::proteced::protected
+::tos ay::to say
+::memebers::members
+::hopefulyl::hopefully
+::wthi::with
+::subscirbers::subscribers
+::keping::keeping
+::lauging::laughing
+::aparmtetn::apartment
+::respoonsible::responsible
+::welath::wealth
+::improtantly::importantly
+::experiemnt::experiment
+::onloine::online
+::girn::grin
+::loiwer::lower
+::concernd::concerned
+::feling::feeling
+::imapct::impact
+::rewerse::reverse
+::contry::country
+::surive::survive
+::skillset::skill set
+::satifsfied::satisfied
+::htemselves::themselves
+::togetzher::together
+::caughed::coughed
+::sity::city
+::iamges::images
+::simpely::simply
+::guaranteee::guarantee
+::ithelps::it helps
+::configuation::configuration
+::avter::after
+::morive::movie
+::expexts::expects
+::wikipedia::Wikipedia
+::ni::in
+::notcie::notice
+::disected::dissected
+::anture::nature
+::projets::projects
+::ouy::you
+::conenct::connect
+::takeing::taking
+::thinsg::things
+::battereis::batteries
+::assshole::asshole
+::cratf::craft
+::descnet::descent
+::AHK::AutoHotkey
+::rruthless::ruthless
+::toay::today
+::haivng::having
+::iehter::either
+::sturggled::struggled
+::builidng::building
+::somehwo::somehow
+::shufle::shuffle
+::anyonethis::anyone this
+::thema gain::them again
+::acknoledgment::acknowledgement
+::thaks::thanks
+::stregnth::strength
+::outhere::out here
+::didndt::didn't
+::Stephany::Stephanie
+::tshirt::t-shirt
+::Tehse::these
+::winbd::wind
+::opinoin::opinion
+::thte::the
+::suiice::suicide
+::stoped::stopped
+::deacde::decade
+::considereing::considering
+::prtty::pretty
+::supsect::suspect
+::aat::at
+::hgihest::highest
+::publicatiosn::publications
+::moement::moment
+::etiher::either
+::mak ethe::make the
+::frighteingin::frightening
+::reson::reason
+::nvoel::novel
+::prev::previous
+::askes::asks
+::laopts::laptops
+::behaviro::behavior
+::worng::wrong
+::perioud::period
+::event hat::even that
+::understod::understood
+::firest::first
+::dashbaord::dashboard
+::coincidentially::coincidentally
+::idetnified::identified
+::methodoligy::methodology
+::makr::mark
+::tomake::to make
+::fifht::fifth
+::someoen::someone
+::poitn::point
+::finsihing::finishing
+::sovles::solves
+::foxus::focus
+::Comamnder::Commander
+::ismplicty::simplicity
+::workspaces::work spaces
+::maintable::maintainable
+::lkeft::left
+::athing::a thing
+::sentury::century
+::theyre::they're
+::bti::bit
+::instalkl::install
+::dayys::days
+::evny::envy
+::fasion::fashion
+::cirumvent::circumvent
+::earend::earned
+::omst::most
+::qulaity::quality
+::Supercahrge::supercharge
+::apth::path
+::apreciate::appreciate
+::keps::keeps
+::acknolodgment::acknowledgment
+::percet::percent
+::proejcts::projects
+::froma::from a
+::samll::small
+::reallyy::really
+::serio9us::serious
+::damgaes::damages
+::trhough::through
+::maen::mean
+::mmetal::metal
+::eo::each other
+::swtich::switch
+::extesnion::extension
+::tha twas::that was
+::alsways::always
+::brackts::brackets
+::comofrt::comfort
+::bekomes::becomes
+::elses::else's
+::onlien::online
+::ju8st::just
+::near-by::nearby
+::typesd::typed
+::WIth::with
+::chian::chain
+::exuse::excuse
+::farnkly::frankly
+::togher::together
+::tabbning::tabbing
+::vvarious::various
+::demed::deemed
+::swithces::switches
+::tof ind::to find
+::qucik::quick
+::helful::helpful
+::programing::programming
+::considertations::considerations
+::eventaully::eventually
+::sruprising::surprising
+::questionaire::questionnaire
+::accs::accounts
+::docotrs::doctors
+::situtaion::situation
+::offter::offer
+::dolalr::dollar
+::vietnam::Vietnam
+::awsome::awesome
+::aprentice::apprentice
+::pesonally::personally
+::seling::selling
+::thiking::thinking
+::deprevation::deprivation
+::wasy::ways
+::differen::different
+::doiong::doing
+::refils::refills
+::fulkl::full
+::exacty::exactly
+::everday::everyday
+::learniung::learning
+::publiations::publications
+::oculdnt::couldn't
+::skae::sake
+::rathter::rather
+::thumbnaisl::thumbnails
+::terrifbly::terribly
+::dartup::dart up
+::utick::untick
+::existentail::existencial
+::storeage::storage
+::pasued::paused
+::travleing::traveling
+::marketpalces::marketplaces
+::iddnt::didn't
+::wek::week
+::busines::business
+::ehtic::ethic
+::cahir::chair
+::stffu::stuff
+::maarine::marine
+::wirte::write
+::tot hat::to that
+::setnece::sentence
+::weve::we've
+::Theere::There
+::appaled::appalled
+::htose::those
+::higly::highly
+::proobably::probably
+::paygrade::pay-grade
+::wireles::wireless
+::statemeents::statements
+::downard::downward
+::intricies::intricacies
+::hwo::how
+::reutrn::return
+::walekd::walked
+::distributtion::distribution
+::poitns::points
+::lok::look
+::atrraction::attraction
+::videot::video
+::keypoard::keyboard
+::horific::horrific
+::corect::correct
+::INto::into
+::importatnly::importantly
+::theres::there is
+::unimportatn::unimportant
+::anyones::anyone's
+::arent::aren't
+::raom::roam
+::gopro::GoPro
+::retirment::retirement
+::tehre::there
+::apaft::apart
+::componentes::components
+::biulding::building
+::aply::apply
+::botheered::bothered
+::ben::been
+::GDocs::Google Docs
+::clousre::closure
+::keyboarsd::keyboards
+::makring::marking
+::mysels::myself
+::rason::reason
+::timie::time
+::forst::forest
+::along time::a long time
+::guadds::guards
+::producitivty::productivity
+::ogtten::gotten
+::corected::corrected
+::wihin::within
+::realiezd::realized
+::frind::friend
+::someeon::someone
+::vid::video
+::realites::realities
+::int heir::in their
+::tset::test
+::crompromise::compromise
+::workbecnh::workbench
+::platfrom::platform
+::contect::context
+::asure::assure
+::similarites::similarities
+::unkonw::unknown
+::froomm::from
+::comon::common
+::duing::during
+::degre::degree
+::litel::little
+::repetitve::repetitive
+::browing::browsing
+::Financiel::financial
+::south::South
+::wont::won't
+::Serivec::Service
+::wuitting::quitting
+::enjoed::enjoyed
+::m e::me
+::dsitractions::distractions
+::stoires::stories
+::sems::seems
+::ntohing::nothing
+::caleld::called
+::unexpecteldy::unexpectedly
+::weasier::easier
+::stright::straight
+::lopp::loop
+::initail::initial
+::maibaord::mainboard
+::cant::can't
+::oyuneed::you need
+::balttle::battle
+::oyu::you
+::watied::waited
+::swet::sweet
+::tiems::times
+::promtoting::promoting
+::shouzld::should
+::fel::feel
+::fe.::for example
+::effor tinto::effort into
+::ewll::well
+::surpringly::surprisingly
+::disappera::disappear
+::sihgt::sight
+::here#s::here's
+::fells::feels
+::cahnce::chance
+::wnnt::want
+::tthat::that
+::oen::one
+::event hough::even though
+::doucmentationss::documentations
+::temporarly::temporarily
+::producitity::productivity
+::attentian::attention
+::andwriting::and writing
+::fromt here::from there
+::realtionships::relationships
+::replicat ethe::replicate the
+::youi::you
+::obvly::obviously
+::unhealty::unhealthy
+::consise::concise
+::lucy::Lucy
+::twnety::twenty
+::cammper::camper
+::acvance::advance
+::parth::path
+::leters::letters
+::somach::stomach
+::carerr::career
+::ehllo::hello
+::tetth::teeth
+::acomment::a comment
+::ehlp::help
+::swedes::Swedes
+::tennt::tent
+::puzle::puzzle
+::insne::insane
+::clohting::clothing
+::etierh::either
+::thoer::other
+::ladi::laid
+::tha tallowed::that allowed
+::somehting::something
+::kno0w::know
+::hadnt::hadn't
+::hiim::him
+::smiel::smile
+::frigtheningly::frighteningly
+::perfetly::perfectly
+::beatufiul::beautiful
+::itseslf::itself
+::incase::in case
+::slihglty::slightly
+::drwon::drown
+::difernet::different
+::Finacial::Financial
+::embarraseed::embarrassed
+::componetns::components
+::specifiv::specific
+::everyoen::everyone
+::eigthy::eighty
+::puzlled::puzzled
+::usualyl::usually
+::somtihng::something
+::anyoen::anyone
+::interrnet::internet
+::sumer::summer
+::markiet::market
+::america::America
+::moake::make
+::aloow::allow
+::spreasheet::spreadsheet
+::firend::friend
+::neve3r::never
+::wtiht::with
+::buiying::buying
+::sqirm::squirm
+::usabel::usable
+::reapir::repair
+::faovr::favor
+::bittenress::bitterness
+::prodest::proudest
+::antoerh::another
+::blieve::believe
+::carefuly::carefully
+::bexond::beyond
+::disapointment::disappointment
+::youneed::you need
+::opportuny::opportunity
+::positon::position
+::actiely::actively
+::copared::compared
+::ehad::head
+::apprently::apparently
+::recommed::recommend
+::keybord::keyboard
+::replacemenbt::replacement
+::pleasrue::pleasure
+::partiicular::particular
+::scritp::script
+::enviouis::envious
+::aplle::apple
+::harddrive::hard drive
+::alloweing::allowing
+::majoriity::majority
+::whaat::what
+::thiink::think
+::rember::remember
+::saidly::sadly
+::clelar::clear
+::blant::bland
+::treasurehunt::treasure hunt
+::ehtese::these
+::jealosy::jealousy
+::ofthem::of them
+::siting::sitting
+::surfave::surface
+::misappropiated::misappropriated
+::hinestly::honestly
+::timothy::Timothy
+::tho0ughts::thoughts
+::madrid::Madrid
+::ti::it
+::amateru::amateur
+::juust::just
+::tirp::trip
+::russian::Russian
+::tehri::their
+::failry::fairly
+::bliver::believer
+::sumamrize::summarize
+::suceds::succeeds
+::painfrul::painful
+::soemtimes::sometimes
+::applicaable::applicable
+::conectivity::connectivity
+::norway::Norway
+::endeavour::endeavor
+::agreat::a great
+::th e::the
+::scnes::scenes
+::tha tpoint::that point
+::reallly::really
+::curent::current
+::abbrs::abbreviations
+::weork::work
+::ahrd::hard
+::fels::feels
+::mayn::many
+::beautiufl::beautiful
+::accoounts::accounts
+::allof::all of
+::magent::magnet
+::unecesary::unnecessary
+::activies::activities
+::encouter::encounter
+::onthat::on that
+::iside::inside
+::larua::Laura
+::mgiht::might
+::rpetty::pretty
+::imagien::imagine
+::th emost::the most
+::togheter::together
+::plÃ¶us::plus
+::FOr::for
+::refil::refill
+::schooll::school
+::wory::worry
+::regalrdess::regardless
+::himt o::him to
+::wnt::want
+::aroundme::around me
+::brougth::brought
+::mentinoed::mentioned
+::chaning::changing
+::galring::glaring
+::javascript::JavaScript
+::afternnon::afternoon
+::windows 10::Windows 10
+::inmidst::in midst
+::ihave::I have
+::everyhitng::everything
+::nothgin::nothing
+::filtereing::filtering
+::dialouge::dialogue
+::projcts::projects
+::fsater::faster
+::repeeat ed::repeated
+::remmebring::remembering
+::jounrey::journey
+::lifextyle::lifestyle
+::pitures::pictures
+::burnoout::burnout
+::moced::moved
+::measn::means
+::beween::between
+::pictrues::pictures
+::hav ethe::have the
+::accumuluated::accumulated
+::ahad::had
+::ikr::I know, right?!
+::ddid::did
+::abou that::about that
+::basemetn::basement
+::weekened::weekend
+::wtithout::without
+::whehther::whether
+::istn::isn't
+::susstain::sustain
+::engange::engage
+::btuÂ ::but
+::changelong::changelog
+::idd::I would
+::tutoirals::tutorials
+::someones::someone's
+::becomea::become a
+::abtteries::batteries
+::fals::falls
+::hunred::hundred
+::listenend::listened
+::tookk::took
+::promtoe::promote
+::ntoes::notes
+::unanounced::unannounced
+::roomate::roommate
+::abo0ut::about
+::negotiatoin::negotiation
+::echochamber::echo chamber
+::Typgin::typing
+::turck::truck
+::nowehre::nowhere
+::dinking::drinking
+::surprsingly::surprisingly
+::disfunctional::dysfunctional
+::duaghter::daughter
+::vaccuum::vacuum
+::bigest::biggest
+::evenutally::eventually
+::qualtiy::quality
+::mesure::measure
+::sincehe::since he
+::ylearly::clearly
+::brian::brain
+::therell::there'll
+::msg::message
+::unknonw::unknown
+::ridiculus::ridiculous
+::repuation::reputation
+::compayn::company
+::neded::needed
+::srurprised::surprised
+::everyhing::everything
+::Iwas::I was
+::aare::are
+::naugthy::naughty
+::variabel::variable
+::wortha::worth a
+::recoding::recording
+::exitement::excitement
+::comibined::combined
+::pres::press
+::involunty::involuntary
+::appraoch::approach
+::infacted::infected
+::baords::boards
+::meeitngs::meetings
+::buton::button
+::favortie::favorite
+::definiteion::definition
+::lookinf::looking
+::someething::something
+::woordworking::wood-working
+::bariers::barriers
+::emitt::emit
+::lenghts::lengths
+::wildnerss::wilderness
+::powreful::powerful
+::sje::she
+::exyactly::exactly
+::brach::branch
+::ifgurative::figurative
+::ewak::weak
+::desing::design
+::nvm::nevermind
+::lviing::living
+::relatvie::relative
+::behidn::behind
+::rnasom::ransom
+::protable::portable
+::tehm::them
+::yers::years
+::ivews::views
+::usuauly::usually
+::towork::to work
+::couild::could
+::fogrot::forgot
+::torgue::torque
+::aynway::anyway
+::everyones::everyone's
+::devine::divine
+::amodern::a modern
+::askiing::asking
+::neeed::need
+::consistet::consisted
+::atm::at the moment
+::fasciantion::fascination
+::jessica::Jessica
+::owrds::words
+::mousewheel::mouse wheel
+::contnetn::content
+::comapred::compared
+::itno::into
+::chocies::choices
+::mabye::maybe
+::prbably::probably
+::editng::editing
+::freuent::frequent
+::feautre::feature
+::steadiedd::steadied
+::markdown::Markdown
+::stackoverflow::StackOverflow
+::dirivng::driving
+::sedonc::second#
+::rememebred::remembered
+::spreadshet::spreadsheet
+::enoguh::enough
+::a lmost::almost
+::thtat::that
+::frey::fray
+::beneftis::benefits
+::listeing::listening
+::lto::lot
+::stres::stress
+::fundamentaly::fundamentally
+::drvie::drive
+::neighbors::neighbours
+::moden::modern
+::isalnd::island
+::doen::done
+::butons::buttons
+::ssomewhat::somewhat
+::chanel::channel
+::gald::glad
+::conencts::connects
+::aversity::adversity
+::ignroe::ignore
+::eaxmle::example
+::thoughr::through
+::favo::favorite
+::sutpidly::stupidly
+::experiemtnation::experimentation
+::surronds::surrounds
+::smal::small
+::Takeway::Takeaway
+::hopi9ng::hoping
+::embarrasingly::embarrassing
+::admitteldy::admittedly
+::jenkins::Jenkins
+::eeven::even
+::relaible::reliable
+::envrionemnt::environment
+::carst::carts
+::herslef::herself
+::couldnbt::couldn't
+::constnatly::constantly
+::compleltey::completely
+::rommates::roommates
+::fre::free
+::croptop::crop top
+::hadning::handing
+::successs::success
+::probabaly::probably
+::competetion::competition
+::ashole::asshole
+::injoy::enjoy
+::frienldy::friendly
+::tomorro::tomorrow
+::forimadle::formidable
+::coment::comment
+::expandds::expands
+::alltogehter::altogether
+::carrry::carry
+::installment::instalment
+::tbale::table
+::havetn::haven't
+::geet::get
+::fraglie::fragile
+::goodle::Google
+::magicaly::magically
+::yall::y'all
+::ihad::I had
+::endup::end up
+::nromal::normal
+::tings::things
+::theday::the day
+::happneed::happened
+::happne::happen
+::mor::more
+::imporant::important
+::keyord::keyword
+::broekn::broken
+::wesbite::website
+::hasle::hassle
+::tohaving::to having
+::defo::definitely
+::findind::finding
+::caputer::capture
+::naivity::naivety
+::metnion::mention
+::batery::battery
+::websitex::websites
+::exp::experience
+::ans::and
+::maneuverable::manoeuvrable
+::screnshot::screenshot
+::eben::even
+::prifate::private
+::alllowed::allowed
+::coloured::colored
+::qhich::which
+::cosntraint::constraint
+::grwon::grown
+::erors::errors
+::cousr::course
+::tzhat::that
+::multipe::multiple
+::eightth::eighth
+::neihgbors::neighbors
+::mreo::more
+::confo::conference
+::w/o::without
+::aynmore::anymore
+::comined::combined
+::reaon::reason
+::roms::rooms
+::thourgh::through
+::facetted::faceted
+::miuntes::minutes
+::corrobate::corroborate
+::redemmed::redeemed
+::wrodless::wordless
+::betwen::between
+::beople::people
+::explantion::explanation
+::assmeble::assemble
+::rrom::room
+::striclty::strictly
+::insttead::instead
+::leagal::legal
+::posot::post
+::Nealry::Nearly
+::skils::skills
+::supprots::supports
+::frighteningsly::frighteningly
+::langauge::language
+::hlaf::half
+::seriosu::serious
+::anonye::anyone
+::bene::been
+::wuirks::quirks
+::geenrally::generally
+::african::African
+::stroy::story
+::dcown::down
+::plugne::plunge
+::peoplke::people
+::conditi9ons::conditions
+::publsih::publish
+::ownt::won't
+::togehther::together
+::openes::opens
+::wouold::would
+::reducint::reducing
+::bandwiht::bandwidth
+::alll::all
+::indepencence::independence
+::t hat::that
+::soemting::something
+::feeeling::feeling
+::twoard::toward
+::motivte::motivate
+::hivhly::highly
+::lops::loops
+::andt hat::and that
+::soundd::sound
+::withotu::without
+::realyy::really
+::arguablöy::arguably
+::siftw::swift
+::compler::compiler
+::bluetooh::Bluetooth
+::ediors::editors
+::onthem::on them
+::facebook::Facebook
+::resotred::restored
+::imporatn::important
+::americans::Americans
+::blatatn::blatant
+::measl::meals
+::autpilot::autopilot
+::roder::order
+::thrity::thirty
+::os::so
+::biuld::build
+::phyisical::physical
+::publihs::publish
+::fucntion::function
+::obstrusive::obtrusive
+::visble::visible
+::awy::away
+::solider::soldier
+::procucitivy::productivity
+::expecatncay::expectancy
+::logitech::Logitech
+::useufl::useful
+::mothly::monthly
+::motivaotr::motivator
+::unneded::unneeded
+::peoploe::people
+::misoginy::misogyny
+::wati::wait
+::poweris::power is
+::ther eare::there are
+::ta::at
+::excercise::exercise
+::kiliing::killing
+::eleemnbt::element
+::somhow::somehow
+::cheecks::cheeks
+::oponion::opinion
+::tabelt::tablet
+::odditiy::oddity
+::planing::planning
+::instil::instill
+::peoplle::people
+::experimetning::experimenting
+::rn::right now
+::acouple::a couple
+::workbehnch::workbench
+::soemoen::someone
+::iwht::with
+::condistions::conditions
+::logn::long
+::oin::on
+::Macbook::MacBook
+::ktichen::kitchen
+::wiithout::without
+::finsih::finish
+::midle::middle
+::commandline::command line
+::subsidised::subsidized
+::hoby::hobby
+::alows::allows
+::anymroe::anymore
+::vecor::vector
+::commital::committal
+::birng::bring
+::figued::figured
+::inevtiable::inevitable
+::i::I
+::conenctions::connections
+::scarfs::scarves
+::seeve::sieve
+::amaziing::amazing
+::annyoing::annoying
+::nowehere::nowhere
+::expext::expect
+::cuase::cause
+::someoine::someone
+::acutlay::actually
+::steppting::stepping
+::neverending::never-ending
+::buring out::burning out
+::idito::idiot
+::looud::loud
+::artifacts::artefacts
+::onw::own
+::a bout::about
+::ecactly::exactly
+::montior::monitor
+::yoututbe::YouTube
+::finanically::financially
+::ocuple::couple
+::allt he::all the
+::windwo::window
+::stsill::still
+::enjoybale::enjoyable
+::amchine::maching
+::strentght::strength
+::moire::more
+::oine::one
+::event aht::even that
+::emtions::emotions
+::gmae::game
+::wincend::winced
+::englsih::English
+::iste::site
+::rebuilidn::rebuilding
+::instagram::Instagram
+::mehtod::method
+::contet::content
+::difrernt::different
+::famlies::families
+::despierateyl::desperately
+::mian::main
+::recentyl::recently
+::tihw::with
+::expd::experienced
+::theis::this
+::im::I'm
+::acgtually::actually
+::serios::serious
+::otherworldy::otherworldly
+::daugher::daughter
+::exageration::exaggeration
+::minuites::minutes
+::muxh::much
+::dooubt::doubt
+::eihter::either
+::inherentyl::inherently
+::makita::Makita
+::otuside::outside
+::seemeed::seemed
+::isseu::issue
+::previoulsy::previously
+::uniwue::unique
+::acutal::actual
+::ipad::iPad
+::sicnerly::sincerely
+::forwad::forward
+::cammping::camping
+::monologe::monologue
+::iin::in
+::evneing::evening
+::cahnge::change
+::worksout::works out
+::wolrdl::world
+::Gemrany::Germany
+::tbetwen::between
+::beiung::being
+::inlflux::influx
+::enlgish::English
+::lets::let's
+::technoligies::technologies
+::o'clok::o'clock
+::midnset::mindset
+::reall::really
+::shes::she's
+::angualr::angular
+::publiish::publish
+::mathc::match
+::paretns::parents
+::distiguished::distinguished
+::totlay::totally
+::wihs::wish
+::overhault::overhauled
+::judgement::judgement
+::suppot::support
+::loing::long
+::generalisation::generalization
+::indivigual::individual
+::thazt::that
+::tha tneeded::that needed
+::htree::three
+::creted::created
+::complately::completely
+::medicien::medicine
+::pron::porn
+::teambuilding::team building
+::indepencen::independence
+::liten::listen
+::WHere::where
+::fascianting::fascinating
+::fulfil::fulfill
+::meant hat::mean that
+::kil::kill
+::substitutded::substituted
+::rightuflly::rightfully
+::yorusef::yourself
+::essentailly::essentially
+::french::French
+::ddint::didn't
+::happeend::happened
+::manaul::manual
+::info::information
+::somoen::someone
+::manged::managed
+::comprehenisve::comprehensive
+::roughtly::roughly
+::ofice::office
+::biusiness::business
+::ofit::of it
+::windowss::Windows
+::clohtes::clothes
+::coice::voice
+::worhtwhile::worthwhile
+::distractive::distracting
+::workgin::working
+::pasing::passing
+::oither::other
+::yotuube::YouTube
+::exactyl::exactly
+::conencted::connected
+::handtrucks::hand trucks
+::porbably::probably
+::coruse::course
+::reallybe::really be
+::proivde::provide
+::adive::advice
+::contatc::contact
+::pragnency::pregnancy
+::john::John
+::ting::thing
+::becond::beyond
+::wordpres::WordPress
+::isntagram::Instagram
+::paset::paste
+::github::Github
+::Oout::out
+::afull::a full
+::dresed::dressed
+::flasw::flaws
+::danlged::dangled
+::knoing::knowing
+::btu::but
+::respectufl::respectful
+::frrom::from
+::folowers::followers
+::minot::minor
+::youre::you're
+::withit::with it
+::ofthese::of these
+::writiung::writing
+::anbgle::angle
+::ineficient::inefficient
+::formelry::formerly
+::focussing::focusing
+::otthers::others
+::requiremenets::requirements
+::betweent he::between the
+::rellay::really
+::scrren::screen
+::noitce::notice
+::anoying::annoying
+::Luara::Laura
+::myslef::myself
+::shoter::shooter
+::mysoginy::misogyny
+::distration::distraction
+::th eother::the other
+::runiung::running
+::lsot::lost
+::stie::site
+::ime::in my experience
+::stackoverlow::StackOverflow
+::authours::authors
+::rbowser::browser
+::gnerator::generator
+::eaiser::easier
+::coleagues::colleagues
+::wirting::writing
+::programmibng::programming
+::topcis::topics
+::razer::Razer
+::ithw::with
+::otehre::other
+::autocorect::auto-correct
+::downa little::down a little
+::letss::lets
+::stephen::Stephen
+::importatnt::important
+::fro::for
+::someon::someone
+::ufll::full
+::projectgs::projects
+::iirc::if I recall correctly
+::funn::fun
+::broing::boring
+::potentail::potential
+::learnd::learned
+::obvsly::obviously
+::preapred::prepared
+::apost::a post
+::whern::when
+::inhis::in his
+::congrats::congratulations
+::proift::profit
+::stresing::stressing
+::rainstrom::rain storm
+::muchmoney::much money
+::parisean::Parisian
+::appplying::applying
+::paln::plan
+::Gemany::Germany
+::ontinues::continues
+::whetehr::whether
+::symptons::symptoms
+::fnishing::finishing
+::joike::joke
+::wnted::wanted
+::everythings::everything's
+::sprial::spiral
+::winodws::windows
+::overcomplicating::over-complicating
+::skilsl::skills
+::ifrst::first
+::invalubale::invaluable
+::stciker::sticker
+::resing::resting
+::werent::weren't
+::journy::journey
+::rnadom::random
+::yout::you
+::wuick::quick
+::uniquze::unique
+::doestn::doesn't
+::documumenation::documentation
+::oif::of
+::generaotr::generator
+::promtoed::promoted
+::problmes::problems
+::wole::whole
+::indepence::independence
+::Sufrave::Surface
+::autohotkey::AutoHotkey
+::whnever::whenever
+::othger::other
+::nmost::most
+::exped::experienced
+::converst::converts
+::amazin,::amazing
+::befals::befalls
+::wuicker::quicker
+::taiga::Taiga
+::ebooks::e-books
+::anaylze::analyze
+::aint::ain't
+::memebr::member
+::inocme::income
+::reasonbly::reasonably
+::databses::databases
+::wigle::wiggle
+::maintaitnnce::maintenance
+::spanish::Spanish
+::hositng::hosting
+::becoms::becomes
+::ksills::skills
+::Feddback::Feedback
+::ac ouple::a couple
+::tuts::tutorials
+::disconected::disconnected
+::rasons::reasons
+::Surprisnlgy::Surprisingly
+::iresponsible::irresponsible
+::gruelsome::gruesome
+::tryto::try to
+::productiviy::productivity
+::poistion::position
+::loahting::loathing
+::for ex::for example
+::proibably::probably
+::importanlty::importantly
+::rom::room
+::browswer::browser
+::producitvity::productivity
+::celebreties::celebrities
+::hopiong::hoping
+::dreamt::dreamed
+::wrose::worse
+::msot::most
+::eclusive::exclusive
+::ofrget::forget
+::compelxity::complexity
+::entereing::entering
+::sherrif::sheriff
+::ybout::about
+::wrtingn::writing
+::defualt::default
+::reasonst::reasons
+::whent here::when there
+::kep::keep
+::laucnh::launch
+::tel::tell
+::plaing::playing
+::ddi::did
+::imporatntly::importantly
+::actully::actually
+::smaile::smile
+::sepnding::spending
+::nothihgn::nothing
+::curently::currently
+::enjyo::enjoy
+::frewuently::frequently
+::mesge::message
+::heatlyh::healthy
+::frontend::front-end
+::Enjjoying::Enjoying
+::wrily::wryly
+::boolenas::booleans
+::ahdnt::hadn't
+::netowork::network
+::livign::living
+::contetn::content
+::engrained::ingrained
+::laredy::already
+::afaik::as far as I know
+::oru::our
+::tow atch::to watch
+::locaion::location
+::horor::horror
+::proabbly::probably
+::#t::{#}todo
+::clik::click
+::affectionally::affectionately
+::loking::looking
+::hghily::highly
+::satifying::satisfying
+::vent hough::ven though
+::dnagerous::dangerous
+::stronly::strongly
+::colaborate::collaborate
+::construcing::constructing
+::womans::woman's
+::interenet::internet
+::insanly::insanely
+::bressing::pressing
+::remembner::remember
+::suppsed::supposed
+::aimleslly::aimlessly
+::absoultey::absolutely
+::cowoker::co-worker
+::implememnt::implement
+::opportunies::opportunities
+::abit::a bit
+::erotcia::erotica
+::engh::enough
+::ejoy::enjoy
+::betteer::better
+::rbink::brink
+::ebook::e-book
+::withut::without
+::differnce::difference
+::simpel::simple
+::wekend::weekend
+::woolen::woollen
+::turna::turn a
+::compoind::compound
+::destiantion::destination
+::mirroed::mirrored
+::russians::Russians
+::turorial::tutorial
+::wisched::wished
+::applicatoin::application
+::ahundred::a hundred
+::godo::good
+::aplications::applications
+::leraning::learning
+::thoguth::thought
+::hegiht::height
+::Renessaince::Renaissance
+::realied::realized
+::thoguhts::thoughts
+::slef::self
+::collegaeus::colleagues
+::idot::idiot
+::directoy::directory
+::event he::even the
+::netwok::network
